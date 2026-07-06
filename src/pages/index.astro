@@ -1,26 +1,13 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import AboutPreview from "../components/AboutPreview.astro";
 ---
 
-<html lang="en">
-  <head>
-    <title>Divine Health Homeopathy</title>
-    <meta name="description" content="Classical homeopathy consultations with Mindy Wallent, supervised student practitioner." />
-  </head>
-
-  <body>
-    <main>
-      <section>
-        <p>Divine Health Homeopathy</p>
-        <h1>Classical homeopathy for gentle, individualized care.</h1>
-        <p>
-          Work with Mindy Wallent, a former critical care nurse and supervised student practitioner,
-          through Homeopathy Help Network consultations.
-        </p>
-
-        <a href="https://homeopathyhelpnow.com/services/">
-          Schedule a Consultation
-        </a>
-      </section>
-    </main>
-  </body>
-</html>
+<Layout
+  title="Divine Health Homeopathy"
+  description="Classical homeopathy consultations with Mindy Wallent, supervised student practitioner."
+>
+  <Hero />
+  <AboutPreview />
+</Layout>

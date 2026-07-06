@@ -1,0 +1,62 @@
+<header class="site-header">
+  <div class="container">
+
+    <a href="/" class="logo">
+      Divine Health Homeopathy
+    </a>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/consultations">Consultations</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<style>
+.site-header{
+    background:white;
+    border-bottom:1px solid #e8e2d7;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 40px;
+}
+
+.logo{
+    text-decoration:none;
+    font-size:1.6rem;
+    font-weight:bold;
+    color:var(--navy);
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    gap:34px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#43546d;
+    font-size:1rem;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+</style>
