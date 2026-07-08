@@ -1,62 +1,177 @@
-<header class="site-header">
-  <div class="container">
+<header class="dhh-header">
+  <div class="dhh-header-inner">
+    <a href="/" class="dhh-brand" aria-label="Divine Health Homeopathy home">
+      <img
+        src="/images/dhh-fleur-official.png"
+        alt=""
+        class="dhh-brand-mark"
+      />
 
-    <a href="/" class="logo">
-      Divine Health Homeopathy
+      <span class="dhh-brand-text">
+        <span class="dhh-brand-script">Divine Health</span>
+        <span class="dhh-brand-subtitle">Homeopathy</span>
+      </span>
     </a>
 
-    <nav>
+    <nav class="dhh-nav" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/about">About</a>
-      <a href="/consultations">Consultations</a>
-      <a href="/faq">FAQ</a>
+      <a href="/services">Services</a>
+      <a href="/resources">Resources</a>
       <a href="/contact">Contact</a>
+      <a href="/consultations" class="dhh-nav-button">Schedule Consultation</a>
     </nav>
-
   </div>
 </header>
 
 <style>
-.site-header{
-    background:white;
-    border-bottom:1px solid #e8e2d7;
-    position:sticky;
-    top:0;
-    z-index:100;
+  @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+
+  .dhh-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(251, 247, 239, 0.97);
+    border-bottom: 1px solid #e8e2d7;
+    backdrop-filter: blur(10px);
+  }
+
+  .dhh-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+  }
+
+  .dhh-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    text-decoration: none;
+    color: var(--navy);
+    flex-shrink: 0;
+    animation: headerFade 0.55s ease both;
+  }
+
+  .dhh-brand-mark {
+    width: 74px;
+    height: 74px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .dhh-brand:hover .dhh-brand-mark {
+    transform: rotate(-6deg) scale(1.04);
+  }
+
+ .dhh-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
+  .dhh-brand-script {
+    font-family: "Alex Brush", cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--navy);
+  }
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  .dhh-brand-subtitle {
+    margin-top: -2px;
 
-    padding:22px 40px;
+    font-size: 0.88rem;
+    font-weight: 700;
+
+    letter-spacing: 0.50em;
+
+    text-transform: uppercase;
+    color: var(--navy);
+
+    display: block;
+    text-align: center;
+}
+  .dhh-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-left: auto;
+    animation: headerFade 0.7s ease 0.1s both;
+  }
+
+  .dhh-nav a {
+    text-decoration: none;
+    color: #43546d;
+    font-size: 1.02rem;
+    font-weight: 600;
+    transition: color 0.25s ease, transform 0.25s ease;
+  }
+
+  .dhh-nav a:hover {
+    color: var(--gold);
+    transform: translateY(-1px);
+  }
+
+  .dhh-nav-button {
+    background: var(--gold);
+    color: white !important;
+
+    padding: 12px 22px;
+
+    border-radius: 999px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow: 0 12px 28px rgba(184,154,94,.24);
 }
 
-.logo{
-    text-decoration:none;
-    font-size:1.6rem;
-    font-weight:bold;
-    color:var(--navy);
-    letter-spacing:.5px;
-}
+  .dhh-nav-button:hover {
+    background: var(--navy);
+    color: white !important;
+  }
 
-nav{
-    display:flex;
-    gap:34px;
-}
+  @keyframes headerFade {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
 
-nav a{
-    text-decoration:none;
-    color:#43546d;
-    font-size:1rem;
-    transition:.25s;
-}
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-nav a:hover{
-    color:var(--gold);
-}
+  @media (max-width: 950px) {
+    .dhh-header-inner {
+      flex-direction: column;
+      padding: 16px 24px;
+      gap: 18px;
+    }
+
+    .dhh-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .dhh-brand-script {
+      font-size: 2.35rem;
+    }
+
+    .dhh-brand-mark {
+      width: 56px;
+      height: 56px;
+    }
+
+    .dhh-brand-subtitle {
+      font-size: 0.68rem;
+    }
+  }
 </style>
