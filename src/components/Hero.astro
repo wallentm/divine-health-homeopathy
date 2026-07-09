@@ -1,173 +1,232 @@
 <section class="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Classical Homeopathy</p>
 
-    <div class="content">
+      <h1>
+        Restoring health naturally through individualized care.
+      </h1>
 
-        <p class="eyebrow">
-            Classical Homeopathy
-        </p>
+      <div class="gold-divider">
+        <span></span>
+        <img src="/images/dhh-fleur-official.png" alt="" />
+        <span></span>
+      </div>
 
-        <h1>
-            Restoring health naturally through individualized care.
-        </h1>
+      <p class="description">
+        Every person has a unique story. Classical homeopathy seeks to
+        understand the whole person, supporting the body's natural ability
+        to heal through carefully selected individualized remedies.
+      </p>
 
-        <p class="description">
+      <div class="buttons">
+        <a
+          class="hero-button primary"
+          href="https://homeopathyhelpnow.com/services/"
+          target="_blank"
+        >
+          Schedule Consultation
+        </a>
 
-            Every person has a unique story.
+        <a class="hero-button outline-gold" href="/what-is-homeopathy">
+          What is Homeopathy?
+        </a>
 
-            Classical homeopathy seeks to understand the whole person,
-            supporting the body's natural ability to heal through carefully
-            selected individualized remedies.
-
-        </p>
-
-        <div class="buttons">
-
-            <a
-              class="primary"
-              href="https://homeopathyhelpnow.com/services/"
-              target="_blank">
-
-              Schedule Consultation
-
-            </a>
-
-            <a
-              class="secondary"
-              href="/about">
-
-              Meet Mindy
-
-            </a>
-
-        </div>
-
+        <a class="hero-button outline-blue" href="/about">
+          Meet Mindy
+        </a>
+      </div>
     </div>
 
+    <div class="hero-art">
+      <img
+        src="/images/botanicals/iris-versicolor-hero-v2.png"
+        alt="Iris versicolor botanical illustration"
+      />
+
+      <p class="botanical-name">
+        <em>Iris versicolor</em>
+      </p>
+    </div>
+  </div>
 </section>
 
 <style>
-
-.hero{
-
-    background:linear-gradient(
-        180deg,
-        #fbf8f3,
-        #f3ede2
-    );
-
-    padding:120px 40px;
+  .hero {
+    background: radial-gradient(circle at top, #fcfaf5, #f5efe5);
+    padding: 40px 40px 80px;
 }
 
-.content{
+  .hero-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+  }
 
-    max-width:760px;
-    margin:auto;
-    text-align:center;
+  .hero-content {
+    max-width: 640px;
+  }
 
-}
+  .eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
 
-.eyebrow{
+  h1 {
+    font-size: 4.3rem;
+    line-height: 1.05;
+    color: var(--navy);
+    margin-bottom: 28px;
+  }
 
-    color:var(--gold);
+  .gold-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
 
-    text-transform:uppercase;
+  .gold-divider span {
+    width: 86px;
+    height: 1px;
+    background: var(--gold);
+  }
 
-    letter-spacing:4px;
+  .gold-divider img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.72;
+  }
 
-    font-size:.9rem;
+  .description {
+    font-size: 1.28rem;
+    line-height: 1.9;
+    color: #596676;
+  }
 
-}
+  .buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 42px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
-h1{
+  .hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease,
+      color 0.25s ease;
+  }
 
-    font-size:4rem;
+  .primary {
+    background: var(--navy);
+    color: white;
+    border: 2px solid var(--navy);
+  }
 
-    line-height:1.1;
+  .primary:hover {
+    background: #173761;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(16, 35, 63, 0.18);
+  }
 
-    color:var(--navy);
+  .outline-gold {
+    background: transparent;
+    color: #7b5f1b;
+    border: 2px solid var(--gold);
+  }
 
-    margin:20px 0;
+  .outline-gold:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(184, 154, 94, 0.18);
+  }
 
-}
+  .outline-blue {
+    background: transparent;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+  }
 
-.description{
+  .outline-blue:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(16, 35, 63, 0.12);
+  }
 
-    font-size:1.25rem;
+  .hero-art {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    line-height:1.9;
+  .hero-art img {
+    width: 100%;
+    max-width: 560px;
+    margin-top: -20px;
+    opacity: 0.28;
+    filter: sepia(0.08);
+    user-select: none;
+    pointer-events: none;
+  }
 
-    color:#5c6777;
+  .botanical-name {
+    margin-top: -20px;
+    color: #8e8472;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+  }
 
-}
-
-.buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    margin-top:45px;
-
-}
-
-.primary{
-
-    background:var(--navy);
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:18px 34px;
-
-    border-radius:50px;
-
-    transition:.25s;
-
-}
-
-.primary:hover{
-
-    background:#173761;
-
-}
-
-.secondary{
-
-    border:2px solid var(--gold);
-
-    color:var(--navy);
-
-    padding:18px 34px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-}
-
-.secondary:hover{
-
-    background:white;
-
-}
-
-@media(max-width:900px){
-
-    h1{
-
-        font-size:2.6rem;
-
+  @media (max-width: 980px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
     }
 
-    .buttons{
-
-        flex-direction:column;
-
+    .hero-content {
+      margin: auto;
     }
 
-}
+    .buttons {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
+    .gold-divider {
+      justify-content: center;
+    }
+
+    .hero-art {
+      order: -1;
+    }
+
+    .hero-art img {
+      max-width: 360px;
+      opacity: 0.18;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
 </style>
