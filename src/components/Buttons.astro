@@ -1,0 +1,78 @@
+---
+const {
+  href = "#",
+  variant = "primary",
+  target = "",
+} = Astro.props;
+
+const className = `button button-${variant}`;
+---
+
+<a
+  href={href}
+  class={className}
+  target={target}
+  rel={target === "_blank" ? "noopener noreferrer" : undefined}
+>
+  <slot />
+</a>
+
+<style>
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 22px;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease,
+      color 0.25s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-primary {
+    background: var(--navy);
+    color: white;
+    border: 2px solid var(--navy);
+  }
+
+  .button-primary:hover {
+    background: #173761;
+    box-shadow: 0 10px 24px rgba(16, 35, 63, 0.18);
+  }
+
+  .button-gold {
+    background: transparent;
+    color: #7b5f1b;
+    border: 2px solid var(--gold);
+  }
+
+  .button-gold:hover {
+    background: white;
+    box-shadow: 0 10px 24px rgba(184, 154, 94, 0.18);
+  }
+
+  .button-blue {
+    background: transparent;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+  }
+
+  .button-blue:hover {
+    background: white;
+    box-shadow: 0 10px 24px rgba(16, 35, 63, 0.12);
+  }
+</style>

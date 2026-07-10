@@ -1,0 +1,202 @@
+---
+import SectionDivider from "../components/SectionDivider.astro";
+import BotanicalCard from "../components/BotanicalCard.astro";
+---
+
+<section class="difference">
+
+  <div class="container">
+
+    <p class="eyebrow">
+      What Makes Classical Homeopathy Different?
+    </p>
+
+    <h2>
+      Individualized care rooted in the whole person.
+    </h2>
+
+    <SectionDivider />
+
+    <p class="intro">
+      Classical homeopathy is a holistic system of medicine that seeks to
+      understand each person as a unique individual. Rather than focusing only
+      on a diagnosis, it carefully considers physical, mental, and emotional
+      symptoms to select a single remedy that supports the body's natural
+      ability to restore balance and health.
+    </p>
+
+    <div class="cards">
+
+      <BotanicalCard
+  image="/images/botanicals/pulsatilla-card.png"
+  botanical="Pulsatilla pratensis"
+  subtitle="Gentle - Compassion - Healing"
+  title="Individualized Care"
+  text="No two people experience illness the same way. A homeopath seeks to understand the whole person, not compartmentalizing you into pieces or parts. This allows the remedy to be tailored to you, not just your condition."
+/>
+
+<BotanicalCard
+  image="/images/botanicals/helleborus-card.png"
+  botanical="Helleborus niger"
+  subtitle="Clarity - Balance - Restoration"
+  title="Whole-Person Healing"
+  text="Homeopathy considers each person unique in body, mind, and spirit. Instead of relying on protocols or treating isolated symptoms, it seeks to restore balance by supporting your body's natural ability to heal."
+/>
+
+<BotanicalCard
+  image="/images/botanicals/aconitum-card.png"
+  botanical="Aconitum napellus"
+  subtitle="Calm - Strength - Vitality"
+  title="A Partner in Your Journey"
+  text="Healing takes time, and you don't have to navigate it alone. Through thoughtful consultations, individualized remedy recommendations, and ongoing follow-up, Divine Health Homeopathy partners with you every step toward lasting wellness."
+/>
+
+    </div>
+
+   <div class="cta">
+  <a href="/what-is-homeopathy" class="learn-button">
+    <span>Learn More About Homeopathy</span>
+    <span class="button-arrow" aria-hidden="true">&rarr;</span>
+  </a>
+</div>
+
+  </div>
+
+</section>
+
+<style>
+
+.difference{
+
+    padding:110px 40px;
+
+    background:
+        radial-gradient(circle at top,#fcfaf5,#f5efe5);
+
+}
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.eyebrow{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:.9rem;
+
+    margin-bottom:16px;
+
+}
+
+h2{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    color:var(--navy);
+
+    margin-bottom:26px;
+
+}
+
+.intro{
+
+    max-width:900px;
+
+    margin:35px auto 70px;
+
+    text-align:center;
+
+    font-size:1.2rem;
+
+    line-height:1.9;
+
+    color:#596676;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+}
+
+.cta{
+
+    text-align:center;
+
+    margin-top:55px;
+
+}
+
+.learn-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: var(--gold);
+  color: white;
+
+  text-decoration: none;
+  padding: 16px 34px;
+  border-radius: 50px;
+
+  font-weight: 700;
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.learn-button:hover {
+  transform: translateY(-2px);
+  background: var(--navy);
+  box-shadow: 0 10px 24px rgba(16, 35, 63, 0.18);
+}
+
+.button-arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.learn-button:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+@media(max-width:1000px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+h2{
+
+font-size:2.4rem;
+
+}
+
+}
+
+</style>

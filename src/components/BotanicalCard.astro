@@ -1,0 +1,154 @@
+---
+const {
+  image,
+  botanical,
+  subtitle,
+  title,
+  text,
+} = Astro.props;
+---
+
+<article class="botanical-card">
+  <p class="card-descriptor">
+    {subtitle}
+  </p>
+
+  <div class="image-wrap">
+    <img
+      src={image}
+      alt={`${botanical} botanical illustration`}
+    />
+
+    <p class="botanical-caption">
+      <em>{botanical}</em>
+    </p>
+  </div>
+
+  <h3>
+    {title}
+  </h3>
+
+  <p class="description">
+    {text}
+  </p>
+</article>
+
+<style>
+  .botanical-card {
+    background:
+      linear-gradient(
+        180deg,
+        #fffaf3,
+        #f8f0e2
+      );
+
+    border: 1px solid #e1d3bd;
+    border-radius: 22px;
+    padding: 30px 28px 34px;
+
+    box-shadow:
+      0 16px 38px rgba(16, 35, 63, 0.08);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .botanical-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 24px 52px rgba(16, 35, 63, 0.13);
+  }
+
+  .card-descriptor {
+    color: var(--gold);
+    text-align: center;
+    text-transform: uppercase;
+
+    letter-spacing: 0.22em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    margin: 0 0 18px;
+  }
+
+  .image-wrap {
+    background: rgba(255, 255, 255, 0.04);
+
+    border:
+      1px solid
+      rgba(184, 154, 94, 0.035);
+
+    border-radius: 18px;
+
+    padding: 2px 2px 18px;
+    min-height: 370px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-bottom: 34px;
+  }
+
+  .image-wrap img {
+    width: 110%;
+    height: 340px;
+
+    object-fit: contain;
+    opacity: 0.94;
+
+    user-select: none;
+    pointer-events: none;
+
+    transition: transform 0.3s ease;
+  }
+
+  .botanical-card:hover .image-wrap img {
+    transform: translateY(-4px);
+  }
+
+  .botanical-caption {
+    margin: 2px 0 0;
+
+    text-align: center;
+    color: #8f8575;
+
+    font-size: 1.08rem;
+    font-style: italic;
+    letter-spacing: 0.03em;
+  }
+
+  h3 {
+    color: var(--navy);
+    text-align: center;
+
+    font-size: 2rem;
+    line-height: 1.12;
+
+    margin: 0 0 22px;
+  }
+
+  .description {
+    color: #596676;
+
+    line-height: 1.82;
+    font-size: 1.02rem;
+
+    margin: 0;
+  }
+
+  @media (max-width: 1000px) {
+    .image-wrap {
+      min-height: 350px;
+    }
+
+    .image-wrap img {
+      width: 100%;
+      height: 320px;
+    }
+  }
+</style>
