@@ -1,0 +1,463 @@
+---
+import SectionDivider from "../components/SectionDivider.astro";
+import Button from "../components/Button.astro";
+---
+
+<section class="explore-section">
+  <div class="explore-container">
+    <header class="explore-heading">
+      <p class="eyebrow">Continue Your Journey</p>
+
+      <h2>Want to Dive Deeper into Homeopathy?</h2>
+
+      <SectionDivider />
+
+      <p class="intro">
+        Whether you're discovering homeopathy for the first time or looking to
+        deepen your understanding, these resources are a great place to continue
+        your journey.
+      </p>
+    </header>
+
+    <div class="explore-grid">
+      <article class="explore-card">
+        <div class="card-art card-art-datura">
+          <img
+            src="/images/botanicals/datura-faq-card.png"
+            alt="Datura stramonium botanical illustration"
+          />
+
+          <p class="botanical-name">
+            <em>Datura stramonium</em>
+          </p>
+        </div>
+
+        <div class="card-content">
+          <p class="card-label">Questions &amp; Answers</p>
+
+          <h3>Frequently Asked Questions</h3>
+
+          <p class="card-description">
+            New to homeopathy? Find clear answers to common questions about
+            remedies, telehealth consultations, what to expect, and how
+            individualized homeopathic care works.
+          </p>
+
+          <div class="card-button">
+            <Button href="/faq" variant="gold">
+              Explore FAQs
+            </Button>
+          </div>
+        </div>
+      </article>
+
+      <article class="explore-card">
+        <div class="card-art card-art-cinchona">
+          <img
+            src="/images/botanicals/cinchona-resources-card.png"
+            alt="Cinchona officinalis botanical illustration"
+          />
+
+          <p class="botanical-name">
+            <em>Cinchona officinalis</em>
+          </p>
+        </div>
+
+        <div class="card-content">
+          <p class="card-label">Education &amp; Discovery</p>
+
+          <h3>Resources &amp; Learning</h3>
+
+          <p class="card-description">
+            Explore trusted research, educational articles, recommended books,
+            historical writings, and other resources that deepen your
+            understanding of classical homeopathy.
+          </p>
+
+          <div class="card-button">
+            <Button href="/resources" variant="gold">
+              Browse Resources
+            </Button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .explore-section {
+    padding: 110px 40px;
+
+    background:
+      radial-gradient(
+        circle at top,
+        #fffdf9 0%,
+        #faf5eb 62%,
+        #f2e8d8 100%
+      );
+  }
+
+  .explore-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .explore-heading {
+    max-width: 880px;
+    margin: 0 auto 68px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0 0 18px;
+    color: var(--navy);
+    font-size: clamp(2.7rem, 5vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .intro {
+    max-width: 760px;
+    margin: 28px auto 0;
+    color: #526176;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+  }
+
+  .explore-card {
+    min-height: 470px;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        145deg,
+        #fffaf2 0%,
+        #f8efe1 100%
+      );
+
+    border: 1px solid #e2d4bd;
+    border-radius: 24px;
+
+    box-shadow:
+      0 18px 44px rgba(16, 35, 63, 0.08);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .explore-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 26px 58px rgba(16, 35, 63, 0.13);
+  }
+
+  .card-art {
+    position: relative;
+    min-width: 0;
+    min-height: 470px;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .card-art img {
+    position: absolute;
+    display: block;
+
+    width: auto;
+    max-width: none;
+    height: 100%;
+
+    opacity: 0.96;
+    mix-blend-mode: multiply;
+
+    filter:
+      sepia(0.06)
+      saturate(0.94)
+      contrast(0.98)
+      brightness(1.02)
+      drop-shadow(0 10px 18px rgba(184, 154, 94, 0.07));
+
+    user-select: none;
+    pointer-events: none;
+
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease;
+  }
+
+  .card-art-datura img {
+    left: 50%;
+    top: 45%;
+
+    transform:
+      translate(-34%, -50%)
+      scale(1.42);
+  }
+
+  .card-art-cinchona img {
+    left: 50%;
+    top: 45%;
+
+    transform:
+      translate(-46%, -50%)
+      scale(1.56);
+  }
+
+  .explore-card:hover .card-art-datura img {
+    transform:
+      translate(-34%, calc(-50% - 4px))
+      scale(1.42);
+
+    opacity: 1;
+  }
+
+  .explore-card:hover .card-art-cinchona img {
+    transform:
+      translate(-46%, calc(-50% - 4px))
+      scale(1.56);
+
+    opacity: 1;
+  }
+
+  .botanical-name {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    min-height: 58px;
+    margin: 0;
+    padding: 18px 12px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8d826f;
+    font-size: 1.04rem;
+    letter-spacing: 0.035em;
+    line-height: 1.2;
+    text-align: center;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(248, 239, 225, 0) 0%,
+        rgba(248, 239, 225, 0.9) 28%,
+        rgba(248, 239, 225, 1) 58%
+      );
+  }
+
+  .card-content {
+    padding: 50px 42px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-label {
+    margin: 0 0 14px;
+
+    color: var(--gold);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin: 0 0 20px;
+
+    color: var(--navy);
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+
+  .card-description {
+    margin: 0;
+
+    color: #526176;
+    font-size: 1.05rem;
+    line-height: 1.78;
+  }
+
+  .card-button {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 1050px) {
+    .explore-card {
+      grid-template-columns: 1fr;
+    }
+
+    .card-art {
+      min-height: 405px;
+    }
+
+    .card-art-datura img {
+      left: 50%;
+      top: 45%;
+
+      transform:
+        translate(-42%, -50%)
+        scale(1.25);
+    }
+
+    .card-art-cinchona img {
+      left: 50%;
+      top: 46%;
+
+      transform:
+        translate(-49%, -50%)
+        scale(1.38);
+    }
+
+    .explore-card:hover .card-art-datura img {
+      transform:
+        translate(-42%, calc(-50% - 4px))
+        scale(1.25);
+    }
+
+    .explore-card:hover .card-art-cinchona img {
+      transform:
+        translate(-49%, calc(-50% - 4px))
+        scale(1.38);
+    }
+  }
+
+  @media (max-width: 780px) {
+    .explore-section {
+      padding: 85px 24px;
+    }
+
+    .explore-heading {
+      margin-bottom: 52px;
+    }
+
+    .explore-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .explore-card {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .card-content {
+      padding: 40px 30px 44px;
+      text-align: center;
+    }
+
+    .card-button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .explore-section {
+      padding: 72px 20px;
+    }
+
+    h2 {
+      font-size: 2.55rem;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+    }
+
+    .card-art {
+      min-height: 345px;
+    }
+
+    .card-art-datura img {
+      left: 50%;
+      top: 45%;
+
+      transform:
+        translate(-42%, -50%)
+        scale(1.16);
+    }
+
+    .card-art-cinchona img {
+      left: 50%;
+      top: 46%;
+
+      transform:
+        translate(-49%, -50%)
+        scale(1.28);
+    }
+
+    .explore-card:hover .card-art-datura img {
+      transform:
+        translate(-42%, -50%)
+        scale(1.16);
+    }
+
+    .explore-card:hover .card-art-cinchona img {
+      transform:
+        translate(-49%, -50%)
+        scale(1.28);
+    }
+
+    .botanical-name {
+      min-height: 54px;
+      padding: 16px 10px 12px;
+      font-size: 0.96rem;
+    }
+
+    .card-content {
+      padding: 34px 24px 40px;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .explore-card,
+    .card-art img {
+      transition: none;
+    }
+
+    .explore-card:hover {
+      transform: none;
+    }
+
+    .explore-card:hover .card-art-datura img {
+      transform:
+        translate(-34%, -50%)
+        scale(1.42);
+    }
+
+    .explore-card:hover .card-art-cinchona img {
+      transform:
+        translate(-46%, -50%)
+        scale(1.56);
+    }
+  }
+</style>
