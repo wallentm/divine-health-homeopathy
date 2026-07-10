@@ -1,0 +1,353 @@
+---
+import SectionDivider from "../components/SectionDivider.astro";
+import Button from "../components/Button.astro";
+---
+
+<section class="consultation-process">
+  <div class="process-container">
+    <header class="process-heading">
+      <p class="eyebrow">What to Expect</p>
+
+      <SectionDivider />
+
+      <h2>A Simple. Personal. Healing Journey.</h2>
+
+      <p class="intro">
+        Classical homeopathy looks at you as a whole person. Here's what you can
+        expect when we work together.
+      </p>
+    </header>
+
+    <div class="process-timeline">
+      <article class="process-step">
+        <div class="step-number" aria-hidden="true">1</div>
+
+        <div class="step-icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 64 64"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 14h31a9 9 0 0 1 9 9v10a9 9 0 0 1-9 9H27L15 51v-9h-5a7 7 0 0 1-7-7V21a7 7 0 0 1 7-7Z"
+            />
+            <path d="M20 25h1M30 25h1M40 25h1" />
+            <path
+              d="M39 42h8l8 6v-6h2a4 4 0 0 0 4-4V27a4 4 0 0 0-4-4h-7"
+            />
+          </svg>
+        </div>
+
+        <h3>Share Your Story</h3>
+
+        <p>
+          Your journey begins with a relaxed consultation from the comfort of
+          your own home. Through a secure telehealth video appointment, we'll
+          explore your health history, current health concerns, lifestyle, and
+          the experiences that make your case unique.
+        </p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number" aria-hidden="true">2</div>
+
+        <div class="step-icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 64 64"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 13h18a9 9 0 0 1 9 9v29a9 9 0 0 0-9-9H7Z"
+            />
+            <path
+              d="M57 13H39a9 9 0 0 0-9 9v29a9 9 0 0 1 9-9h18Z"
+            />
+            <path d="M44 31c8-3 11-10 12-17" />
+            <path d="M44 31c-1-7 1-12 6-16" />
+            <path d="M44 31c6 1 10 4 13 9" />
+          </svg>
+        </div>
+
+        <h3>Individualized Analysis</h3>
+
+        <p>
+          Using the principles of classical homeopathy, your symptoms are
+          carefully analyzed to identify the single remedy that best matches
+          your unique pattern.
+        </p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number" aria-hidden="true">3</div>
+
+        <div class="step-icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 64 64"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M32 26c-8-11-23-6-23 6 0 11 13 20 23 27 10-7 23-16 23-27 0-12-15-17-23-6Z"
+            />
+            <path
+              d="M4 46h14l8 5h19a5 5 0 0 0 4-2l10-11a4 4 0 0 0-6-5l-8 7H33"
+            />
+            <path
+              d="M4 37h10l10 6h12a4 4 0 0 1 0 8H25"
+            />
+          </svg>
+        </div>
+
+        <h3>Continued Support</h3>
+
+        <p>
+          Healing unfolds over time. Follow-up appointments allow us to monitor
+          your progress, make thoughtful adjustments when needed, and support
+          you throughout your journey.
+        </p>
+      </article>
+    </div>
+
+    <div class="process-cta">
+      <Button href="/consultations" variant="gold">
+        Learn About the Consultation Process
+      </Button>
+    </div>
+
+    <p class="closing-note">
+      Ready to take the next step toward vibrant health? I'm here to help.
+    </p>
+  </div>
+</section>
+
+<style>
+  .consultation-process {
+    position: relative;
+    overflow: hidden;
+    padding: 110px 40px;
+    background:
+      radial-gradient(circle at top, #fffaf1 0%, #f8f1e6 58%, #f1e6d5 100%);
+  }
+
+  .process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-heading {
+    max-width: 900px;
+    margin: 0 auto 95px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 4px;
+    color: var(--gold);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 24px 0 20px;
+    color: var(--navy);
+    font-size: clamp(2.7rem, 5vw, 4.2rem);
+    line-height: 1.05;
+  }
+
+  .intro {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #43546d;
+    font-size: 1.22rem;
+    line-height: 1.75;
+  }
+
+  .process-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 52px;
+  }
+
+  .process-timeline::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 16.5%;
+    right: 16.5%;
+    height: 1px;
+    background: rgba(184, 154, 94, 0.75);
+  }
+
+  .process-step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .step-number {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+
+    background: #fbf6ed;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.35rem;
+
+    box-shadow: 0 10px 30px rgba(184, 154, 94, 0.1);
+  }
+
+  .step-icon {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 22px;
+    display: grid;
+    place-items: center;
+
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(184, 154, 94, 0.22);
+    border-radius: 50%;
+
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      background 0.28s ease;
+  }
+
+  .step-icon svg {
+    width: 64px;
+    height: 64px;
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .process-step:hover .step-icon {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.48);
+    box-shadow: 0 16px 34px rgba(16, 35, 63, 0.08);
+  }
+
+  h3 {
+    margin: 0 0 16px;
+    color: var(--navy);
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .process-step p {
+    margin: 0 auto;
+    max-width: 340px;
+    color: #43546d;
+    font-size: 1.04rem;
+    line-height: 1.75;
+  }
+
+  .process-cta {
+    margin-top: 58px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .closing-note {
+    margin: 28px 0 0;
+    text-align: center;
+    color: var(--navy);
+    font-size: 1.12rem;
+    font-style: italic;
+  }
+
+  @media (max-width: 900px) {
+    .consultation-process {
+      padding: 85px 24px;
+    }
+
+    .process-heading {
+      margin-bottom: 55px;
+    }
+
+    .process-timeline {
+      grid-template-columns: 1fr;
+      gap: 58px;
+    }
+
+    .process-timeline::before {
+      top: 36px;
+      bottom: 36px;
+      left: 50%;
+      right: auto;
+      width: 1px;
+      height: auto;
+      transform: translateX(-50%);
+    }
+
+    .process-step {
+      background: #f9f3e8;
+      padding: 0 20px 10px;
+    }
+
+    .step-number {
+      margin-bottom: 18px;
+    }
+
+    .process-step p {
+      max-width: 620px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .consultation-process {
+      padding: 72px 20px;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.28em;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+    }
+
+    .process-timeline::before {
+      display: none;
+    }
+
+    .process-step {
+      padding: 0;
+      background: transparent;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    .process-cta {
+      margin-top: 48px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .step-icon {
+      transition: none;
+    }
+
+    .process-step:hover .step-icon {
+      transform: none;
+    }
+  }
+</style>
