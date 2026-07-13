@@ -159,7 +159,7 @@ import Button from "../components/Button.astro";
         <div class="story-copy">
           <p>
             Over the following years, they pursued many avenues of care,
-            including many different complimentary and integrative medicine approaches, and found temporary improvement,
+            including several different complimentary and integrative medicine approaches, and found temporary improvement,
             but the problem continued to return.
           </p>
 
@@ -331,8 +331,14 @@ import Button from "../components/Button.astro";
           deep respect for individualized classical homeopathy. She believes
           that every person&rsquo;s story is unique, every case deserves
           thoughtful attention, and healing is not about treating a
-          diagnosis&mdash;it is about caring for the whole person.
+          diagnosis&mdash;it is about caring for the whole person. Her search for Truth continues to guide her work today as she is grounded by her faith in God with gratitude for the wisdom of His creation. She considers it a privilege to walk alongside each client as they pursue greater health, vitality, and restoration. 
         </p>
+
+        <div class="faith-motto" aria-label="Thy will be done">
+        <span aria-hidden="true"></span>
+        <p>Fiat Voluntas Tua</p>
+        <span aria-hidden="true"></span>
+        </div>
 
         <div class="about-actions">
           <Button href="/consultations" variant="gold">
@@ -394,6 +400,48 @@ import Button from "../components/Button.astro";
     letter-spacing: 0.35em;
     text-transform: uppercase;
   }
+
+.faith-motto {
+  margin-top: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.faith-motto span {
+  width: 46px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(184, 154, 94, 0.72)
+    );
+}
+
+.faith-motto span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(184, 154, 94, 0.72),
+      transparent
+    );
+}
+
+.faith-motto p {
+  margin: 0;
+
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-align: center;
+}
 
   .centered {
     text-align: center;
