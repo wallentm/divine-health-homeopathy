@@ -1,46 +1,201 @@
-# Astro Starter Kit: Basics
+# Divine Health Homeopathy Website
 
-```sh
-npm create astro@latest -- --template basics
+Official website for **Divine Health Homeopathy**
+https://divinehealthhomeopathy.com
+
+---
+
+# Project Status
+
+Current Version: **v1.2**
+
+Status:
+- Azure Static Web App
+- GitHub source control
+- Astro framework
+- Production deployment active
+
+---
+
+# Technology
+
+- Astro
+- HTML
+- CSS
+- Azure Static Web Apps
+- GitHub Actions
+
+---
+
+# Local Development
+
+Start the development server:
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open:
 
-## 🚀 Project Structure
+http://localhost:4321
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+# Build
+
+```bash
+npm run build
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Preview production build:
 
-## 🧞 Commands
+```bash
+npm run preview
+```
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Deployment
 
-## 👀 Want to learn more?
+Deployment is automatic.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Workflow:
+
+VS Code
+↓
+
+Git Commit
+↓
+
+GitHub
+↓
+
+GitHub Actions
+↓
+
+Azure Static Web App
+↓
+
+Production Website
+
+---
+
+# Repository Structure
+
+```
+public/
+    images/
+    favicon/
+
+src/
+    components/
+    layouts/
+    pages/
+    styles/
+
+.github/
+```
+
+---
+
+# Current Pages
+
+- Home
+- About
+- Consultations
+- FAQ
+
+Planned
+
+- Resources
+- Contact
+
+---
+
+# Design Philosophy
+
+The site is intentionally designed to reflect:
+
+- Classical
+- Timeless
+- Elegant
+- Warm
+- Trustworthy
+- Historically grounded
+
+The visual inspiration comes from:
+
+- antique botanical illustrations
+- historical pharmacy
+- nineteenth-century books
+- parchment
+- navy and gold typography
+
+---
+
+# Brand Colors
+
+Primary Navy
+
+Gold Accent
+
+Warm Cream Background
+
+Soft Taupe
+
+---
+
+# Git Workflow
+
+Save changes
+
+```bash
+git add .
+git commit -m "Description"
+git push origin main
+```
+
+Tag important milestones
+
+```bash
+git tag -a v1.2 -m "Version 1.2"
+
+git push origin v1.2
+```
+
+---
+
+# Recovery
+
+Clone repository
+
+```bash
+git clone https://github.com/wallentm/divine-health-homeopathy.git
+```
+
+Install
+
+```bash
+npm install
+```
+
+Run
+
+```bash
+npm run dev
+```
+
+---
+
+# Maintained By
+
+Mindy and Sean Wallent
+
+Website development
+
+Architecture
+
+Azure hosting
+
+GitHub management.
