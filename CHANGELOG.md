@@ -4,6 +4,22 @@ All notable changes to the Divine Health Homeopathy website are documented here.
 
 ---
 
+## v1.2.1 — July 14, 2026
+
+### Added
+- Comprehensive project README
+- Project CHANGELOG
+- AI development guidance (AGENTS.md)
+- Project knowledge documentation (CLAUDE.md)
+
+### Improved
+- Project documentation
+- Development workflow
+- Recovery and onboarding documentation
+- Version management practices
+
+---
+
 ## v1.2 — July 14, 2026
 
 ### Added
