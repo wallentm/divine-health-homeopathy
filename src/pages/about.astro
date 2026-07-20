@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProtectedImage from "../components/ProtectedImage.astro";
 import SectionDivider from "../components/SectionDivider.astro";
 import Button from "../components/Button.astro";
 ---
@@ -34,12 +35,13 @@ import Button from "../components/Button.astro";
         </div>
 
         <div class="portrait-frame">
-          <img
-            src="/images/mindy-about.jpg"
-            alt="Mindy Wallent, founder of Divine Health Homeopathy"
-            class="portrait"
-          />
-        </div>
+  <ProtectedImage
+    src="/images/mindy-about.jpg"
+    alt="Mindy Wallent, founder of Divine Health Homeopathy"
+    class="portrait"
+    loading="eager"
+  />
+</div>
 
       </div>
     </section>
