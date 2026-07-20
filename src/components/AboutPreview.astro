@@ -1,6 +1,7 @@
 ---
 import SectionDivider from "./SectionDivider.astro";
 import Button from "./Button.astro";
+import ProtectedImage from "./ProtectedImage.astro";
 ---
 
 <section class="about-preview">
@@ -45,13 +46,14 @@ import Button from "./Button.astro";
       </div>
     </div>
 
-    <div class="about-photo-wrap">
-      <img
-        src="/images/mindy-headshot.jpg"
-        alt="Mindy Wallent"
-        class="about-photo"
-      />
-    </div>
+   <div class="about-photo-wrap">
+  <ProtectedImage
+    src="/images/mindy-headshot.jpg"
+    alt="Mindy Wallent"
+    class="about-photo"
+    loading="eager"
+  />
+</div>
   </div>
 </section>
 
