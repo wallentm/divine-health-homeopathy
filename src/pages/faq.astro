@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProtectedImage from "../components/ProtectedImage.astro";
 import SectionDivider from "../components/SectionDivider.astro";
 import Button from "../components/Button.astro";
 
@@ -21,11 +22,13 @@ const contactEmail =
 
         <figure class="letter-figure">
           <div class="letter-frame">
-            <img
-              src="/images/history/hahnemann-truth-letter.jpg"
-              alt="Facsimile of an autograph letter written by Samuel Hahnemann in Paris on March 12, 1843"
-            />
-          </div>
+  <ProtectedImage
+    src="/images/history/hahnemann-truth-letter.jpg"
+    alt="Facsimile of an autograph letter written by Samuel Hahnemann in Paris on March 12, 1843"
+    class="letter-photo"
+    loading="lazy"
+  />
+</div>
 
           <figcaption>
             Autograph letter written by Samuel Hahnemann in Paris on March 12,
@@ -78,10 +81,13 @@ const contactEmail =
 
         <div class="topic-feature">
           <figure class="topic-image classical-image">
-            <img
-              src="/images/history/apothecary-still-life.jpg"
-              alt="Black-and-white still life with antique Boericke and Tafel pharmacy bottles, homeopathic books, mortar and pestle, candle, and remedy vial"
-            />
+  <ProtectedImage
+    src="/images/history/apothecary-still-life.jpg"
+    alt="Black-and-white still life with antique Boericke and Tafel pharmacy bottles, homeopathic books, mortar and pestle, candle, and remedy vial"
+    class="topic-image-photo"
+    loading="lazy"
+    objectFit="contain"
+  />
 
             <figcaption>
   Original <cite>Boericke &amp; Tafel&rsquo;s Triturations </cite>
@@ -333,10 +339,14 @@ const contactEmail =
           </div>
 
           <figure class="topic-image remedies-image">
-            <img
-              src="/images/history/mindy-study-collection.jpg"
-              alt="Mindy's homeopathic study collection with the Organon of Medicine, materia medica, antique Boericke and Tafel bottle, mortar and pestle, candle, and remedy vial"
-            />
+          <ProtectedImage
+          src="/images/history/mindy-study-collection.jpg"
+          alt="Mindy's homeopathic study collection with the Organon of Medicine, materia medica, antique Boericke and Tafel bottle, mortar and pestle, candle, and remedy vial"
+          class="topic-image-photo"
+          loading="lazy"
+          objectFit="contain"
+          
+          />
 
            <figcaption>
   <strong>Tools of the Trade. </strong>
@@ -667,12 +677,17 @@ const contactEmail =
     transform: rotate(-1deg);
   }
 
-  .letter-frame img {
+  .letter-frame .protected-image {
     display: block;
 
     width: 100%;
     height: auto;
     max-height: 610px;
+}
+
+.letter-frame .protected-image img {
+    width: 100%;
+    height: auto;
 
     object-fit: contain;
     object-position: center;
@@ -681,7 +696,7 @@ const contactEmail =
       sepia(0.08)
       saturate(0.86)
       contrast(0.98);
-  }
+}
 
   .letter-figure figcaption {
     margin-top: 14px;
@@ -803,7 +818,7 @@ const contactEmail =
   text-align: center;
 }
 
-.topic-image img {
+.topic-image .protected-image {
   display: block;
 
   width: auto;
@@ -811,6 +826,15 @@ const contactEmail =
   height: auto;
   max-height: 560px;
   margin: 0 auto;
+}
+
+.topic-image .protected-image img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 560px;
 
   border: 5px solid rgba(255, 253, 249, 0.82);
   border-radius: 14px;
