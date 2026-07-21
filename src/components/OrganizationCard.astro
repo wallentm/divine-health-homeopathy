@@ -1,0 +1,90 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  href: string;
+}
+
+const { name, description, href } = Astro.props;
+---
+
+<article class="organization-card">
+  <div class="accent" aria-hidden="true"></div>
+
+  <h3>{name}</h3>
+  <p>{description}</p>
+
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Visit Website
+    <span aria-hidden="true">→</span>
+  </a>
+</article>
+
+<style>
+  .organization-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 255px;
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid rgba(20, 44, 65, 0.1);
+    border-radius: 18px;
+    background: #fffdf8;
+    box-shadow: 0 10px 30px rgba(28, 36, 43, 0.07);
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .organization-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(28, 36, 43, 0.12);
+  }
+
+  .accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #17324a, #b99146);
+  }
+
+  h3 {
+    margin: 0 0 16px;
+    color: #17324a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  p {
+    margin: 0 0 24px;
+    color: #50585e;
+    line-height: 1.7;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin-top: auto;
+    color: #17324a;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  a span {
+    transition: transform 160ms ease;
+  }
+
+  a:hover span {
+    transform: translateX(4px);
+  }
+</style>

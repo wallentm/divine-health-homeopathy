@@ -1,0 +1,137 @@
+---
+import ProtectedImage from "./ProtectedImage.astro";
+
+interface Props {
+  image: string;
+  title: string;
+  author: string;
+  description: string;
+  href: string;
+}
+
+const { image, title, author, description, href } = Astro.props;
+---
+
+<article class="book-card">
+  <div class="book-cover">
+    <ProtectedImage
+      src={image}
+      alt={`Cover of ${title} by ${author}`}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="book-content">
+    <h3>{title}</h3>
+
+    <p class="author">
+      {author}
+    </p>
+
+    <p class="description">
+      {description}
+    </p>
+
+    <a
+      class="card-link"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View on Amazon
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</article>
+
+<style>
+.book-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fffdf8;
+  border: 1px solid rgba(20,44,65,.10);
+  box-shadow: 0 12px 34px rgba(28,36,43,.08);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(28,36,43,.13);
+}
+
+.book-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 340px;
+  padding: 30px;
+  background: linear-gradient(
+    145deg,
+    rgba(239,232,218,.72),
+    rgba(250,247,239,.96)
+  );
+}
+
+.book-cover :global(.protected-image) {
+  width: 100%;
+  max-width: 210px;
+}
+
+.book-cover :global(.protected-image img) {
+  display: block;
+  width: 100%;
+  max-height: 285px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 12px rgba(21,29,35,.18));
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px;
+}
+
+.book-content h3 {
+  margin: 0;
+  color: #17324a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.author {
+  margin: 8px 0 18px;
+  color: #b08638;
+  font-weight: 700;
+  font-size: .95rem;
+}
+
+.description {
+  margin: 0 0 24px;
+  color: #4f575e;
+  line-height: 1.7;
+}
+
+.card-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  color: #17324a;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.card-link span {
+  transition: transform .16s ease;
+}
+
+.card-link:hover span {
+  transform: translateX(4px);
+}
+</style>

@@ -1,0 +1,135 @@
+---
+import ProtectedImage from "../components/ProtectedImage.astro";
+---
+
+<section class="resources-hero">
+  <ProtectedImage
+    src="/images/resources-bookshelf-hero.webp"
+    alt="A curated bookshelf containing medical, scientific, and homeopathic books"
+    loading="eager"
+    fetchpriority="high"
+  />
+
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Explore &amp; Discover</p>
+
+    <h1>Learning Resources</h1>
+
+    <p class="hero-intro">
+      Explore trusted organizations, foundational literature, and educational
+      resources to deepen your understanding of classical homeopathy.
+    </p>
+  </div>
+</section>
+
+<style>
+  .resources-hero {
+    position: relative;
+    min-height: clamp(560px, 74vh, 790px);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .resources-hero :global(.protected-image) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .resources-hero :global(.protected-image img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 54% 48%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(11, 26, 40, 0.84) 0%,
+        rgba(11, 26, 40, 0.65) 38%,
+        rgba(11, 26, 40, 0.18) 72%,
+        rgba(11, 26, 40, 0.06) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(11, 26, 40, 0.35),
+        transparent 45%
+      );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(1180px, calc(100% - 40px));
+    min-height: clamp(560px, 74vh, 790px);
+    margin: 0 auto;
+    padding: 115px 0 70px;
+    color: #fffdf8;
+    transform: translateY(18px);
+  }
+
+  .eyebrow {
+    margin: 0 0 12px;
+    color: #e3c980;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 720px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.9rem, 6.6vw, 5.35rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+
+  .hero-intro {
+    max-width: 620px;
+    margin: 28px 0 0;
+    font-size: clamp(1.05rem, 2vw, 1.28rem);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 680px) {
+    .resources-hero,
+    .hero-content {
+      min-height: 620px;
+    }
+
+    .resources-hero :global(.protected-image img) {
+      object-position: 48% center;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(
+          0deg,
+          rgba(11, 26, 40, 0.9) 0%,
+          rgba(11, 26, 40, 0.62) 62%,
+          rgba(11, 26, 40, 0.22) 100%
+        );
+    }
+
+    .hero-content {
+      justify-content: flex-end;
+      padding: 0 0 110px;
+      transform: none;
+    }
+  }
+</style>

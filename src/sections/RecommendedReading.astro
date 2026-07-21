@@ -1,0 +1,140 @@
+---
+import BookCard from "../components/BookCard.astro";
+
+const books = [
+  {
+    image: "/images/organon-cover.jpg",
+    title: "Organon of the Medical Art",
+    author: "Samuel Hahnemann",
+    description:
+      "The foundational text of classical homeopathy, presenting Hahnemann's principles of case-taking, remedy selection, and the practice of the healing art.",
+    href: "https://www.amazon.com/Organon-Medical-Art-Samuel-Hahnemann/dp/1889613002/",
+  },
+  {
+    image: "/images/complete-homeopathy-handbook-cover.jpg",
+    title: "The Complete Homeopathy Handbook",
+    author: "Miranda Castro",
+    description:
+      "A practical and approachable guide for families interested in understanding common remedies and everyday homeopathic care.",
+    href: "https://www.amazon.com/Complete-Homeopathy-Handbook-Effective-Complaints/dp/0312063202/",
+  },
+  {
+    image: "/images/homeopathy-start-here-cover.jpg",
+    title: "Homeopathy: Start Here",
+    author: "Ann Jerome, PhD, CCH",
+    description:
+      "An accessible introduction to homeopathic principles, careful observation, and the process of selecting an appropriate remedy.",
+    href: "https://www.amazon.com/Homeopathy-Start-Ann-Jerome-PhD/dp/0977305724/",
+  },
+  {
+    image: "/images/homeopathy-basics-cover.jpg",
+    title: "Homeopathy Basics",
+    author: "Priscilla Medders",
+    description:
+      "A modern beginner's guide explaining homeopathic self-care, when professional guidance is appropriate, and how to approach remedy use responsibly.",
+    href: "https://www.amazon.com/Homeopathy-Basics-Treat-Yourself-Results/dp/B0B7H1DD3P/",
+  },
+];
+---
+
+<section class="recommended-reading">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow">A Place to Begin</p>
+
+      <h2>Recommended Reading</h2>
+
+      <p class="section-intro">
+        These books offer an introduction to the philosophy, history, and
+        practical study of classical homeopathy. Some are written for
+        beginners, while others invite deeper exploration of its foundational
+        principles.
+      </p>
+    </div>
+
+    <div class="book-grid">
+      {
+        books.map((book) => (
+          <BookCard {...book} />
+        ))
+      }
+    </div>
+
+    <p class="link-note">
+      Divine Health Homeopathy does not currently receive compensation from
+      these links. They are shared solely as educational recommendations.
+    </p>
+  </div>
+</section>
+
+<style>
+  .recommended-reading {
+    padding: 115px 0 105px;
+    background: #f4ede2;
+  }
+
+  .section-inner {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    max-width: 750px;
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    margin: 0 0 12px;
+    color: #a77f37;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    color: #17324a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.08;
+  }
+
+  .section-intro {
+    margin: 20px 0 0;
+    color: #535c63;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .link-note {
+    margin: 24px 0 0;
+    color: #6e7479;
+    font-size: 0.84rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 980px) {
+    .book-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 680px) {
+    .recommended-reading {
+      padding: 90px 0 80px;
+    }
+
+    .book-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
