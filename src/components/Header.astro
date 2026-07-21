@@ -14,13 +14,21 @@
     </a>
 
     <nav class="dhh-nav" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/resources">Resources</a>
-      <a href="/contact">Contact</a>
-      <a href="/consultations" class="dhh-nav-button">Schedule Consultation</a>
-    </nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/faq">FAQ</a>
+  <a href="/resources">Resources</a>
+
+  <a
+    href="https://homeopathyhelpnow.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="dhh-nav-button"
+  >
+    Schedule Consultation
+  </a>
+</nav>
+
   </div>
 </header>
 
@@ -39,7 +47,7 @@
   .dhh-header-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 12px 40px;
+    padding: 8px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,8 +65,8 @@
   }
 
   .dhh-brand-mark {
-    width: 74px;
-    height: 74px;
+    width: 68px;
+    height: 68px;
     object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
@@ -101,6 +109,7 @@
     justify-content: flex-end;
     gap: 30px;
     margin-left: auto;
+    transform: translateX(12px);
     animation: headerFade 0.7s ease 0.1s both;
   }
 
@@ -121,7 +130,7 @@
     background: var(--gold);
     color: white !important;
 
-    padding: 12px 22px;
+    padding: 10px 22px;
 
     border-radius: 999px;
     font-weight: 700;
