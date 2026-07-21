@@ -1,0 +1,143 @@
+---
+import OrganizationCard from "../components/OrganizationCard.astro";
+
+const organizations = [
+  {
+    name: "Homeopathy Research Institute",
+    description:
+      "A UK-based charity dedicated to advancing high-quality scientific research in homeopathy and improving public access to reliable information about the evidence.",
+    href: "https://www.hri-research.org/",
+  },
+  {
+    name: "Homeopathic Pharmacopoeia Convention of the United States",
+    description:
+      "Maintains and publishes the Homeopathic Pharmacopoeia of the United States, the official reference for the identity, quality, and preparation standards of homeopathic medicines in the United States.",
+    href: "https://www.hpus.com/",
+  },
+  {
+    name: "Institute for the Advancement of Homeopathy",
+    description:
+      "Promotes the future of classical homeopathy through education, advocacy, collaboration, and expanded access. The Institute works to strengthen the homeopathic community while helping connect traditional and conventional approaches to health.",
+    href: "https://advancehomeopathy.org/",
+  },
+  {
+    name: "North American Society of Homeopaths",
+    description:
+      "A professional organization supporting high standards of homeopathic practice, professional registration, ethics, continuing education, and the advancement of the homeopathic profession throughout North America.",
+    href: "https://homeopathy.org/",
+  },
+  {
+    name: "Homeopathic Nurses Association",
+    description:
+      "Supports nurses who are studying, practicing, or incorporating homeopathy within the broader context of professional nursing care.",
+    href: "https://www.nursehomeopaths.org/",
+  },
+];
+---
+
+<section class="trusted-organizations">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow">Continue Learning</p>
+
+      <h2>Trusted Organizations</h2>
+
+      <p class="section-intro">
+        These organizations contribute to homeopathic research, education,
+        professional standards, advocacy, and access to reliable information.
+        Each offers a different way to continue exploring the broader
+        homeopathic community.
+      </p>
+    </div>
+
+    <div class="organization-grid">
+      {
+        organizations.map((organization) => (
+          <OrganizationCard {...organization} />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .trusted-organizations {
+    padding: 110px 0 125px;
+    background: #fbf7ef;
+  }
+
+  .section-inner {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    margin: 0 0 12px;
+    color: #a77f37;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    color: #17324a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.08;
+  }
+
+  .section-intro {
+    margin: 20px 0 0;
+    color: #535c63;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .organization-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .organization-grid > :global(*) {
+    grid-column: span 2;
+  }
+
+  .organization-grid > :global(*:nth-child(4)) {
+    grid-column: 2 / span 2;
+  }
+
+  .organization-grid > :global(*:nth-child(5)) {
+    grid-column: 4 / span 2;
+  }
+
+  @media (max-width: 980px) {
+    .organization-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .organization-grid > :global(*),
+    .organization-grid > :global(*:nth-child(4)),
+    .organization-grid > :global(*:nth-child(5)) {
+      grid-column: auto;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .trusted-organizations {
+      padding: 85px 0 95px;
+    }
+
+    .organization-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
