@@ -33,19 +33,27 @@ const contactEmail =
           symptoms that make your case unlike anyone else&rsquo;s.
         </p>
 
-        <div class="hero-actions">
-          <Button
-            href={scheduleUrl}
-            target="_blank"
-            variant="primary"
-          >
-            Schedule a Consultation
-          </Button>
+        <p class="schedule-note">
+  Before scheduling, please request
+  <strong> "Mindy Wallent"</strong> in the
+  <em> Student Practitioner</em> field when submitting your consultation
+  request through Homeopathy Help Network by clicking the Schedule
+  Consultation button below.
+</p>
 
-          <Button href={contactEmail} variant="gold">
-            Contact Mindy
-          </Button>
-        </div>
+<div class="hero-actions">
+  <Button
+    href={scheduleUrl}
+    target="_blank"
+    variant="primary"
+  >
+    Schedule Consultation
+  </Button>
+
+  <Button href={contactEmail} variant="gold">
+    Contact Mindy
+  </Button>
+</div>
       </div>
     </section>
 
@@ -533,24 +541,29 @@ const contactEmail =
           understand the next step.
         </p>
 
-        <div class="cta-actions">
-          <Button
-            href={scheduleUrl}
-            target="_blank"
-            variant="primary"
-          >
-            Schedule Through Homeopathy Help Network
-          </Button>
+        <p class="schedule-note">
+  Before scheduling, please request
+  <strong> "Mindy Wallent"</strong> in the
+  <em> Student Practitioner</em> field
+  when submitting your consultation request through Homeopathy Help Network
+  by clicking the Schedule Consultation button below.
+</p>
 
-          <Button href={contactEmail} variant="gold">
-            Contact Mindy
-          </Button>
-        </div>
+<div class="cta-actions">
+  <Button
+    href={scheduleUrl}
+    target="_blank"
+    variant="primary"
+  >
+    Schedule Consultation
+  </Button>
 
-        <p class="supervision-note">
-          Consultations are provided as part of Mindy&rsquo;s supervised
-          clinical internship through Homeopathy Help Network.
-        </p>
+  <Button href={contactEmail} variant="gold">
+    Contact Mindy
+  </Button>
+</div>
+
+
       </div>
     </section>
 
@@ -647,9 +660,33 @@ const contactEmail =
     line-height: 1.88;
   }
 
+  .schedule-note {
+
+  max-width: 680px;
+
+  margin: 32px auto 0;
+
+  text-align: center;
+
+  line-height: 1.6;
+
+  font-size: 0.96rem;
+
+  color: #40516a;
+
+}
+
+.schedule-note strong {
+
+  color: #0f2a4d;
+
+  font-weight: 700;
+
+}
+
   .hero-actions,
   .cta-actions {
-    margin-top: 40px;
+    margin-top: 24px;
 
     display: flex;
     align-items: center;
