@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout
+  title="Page Not Found | Divine Health Homeopathy"
+  description="The page you requested could not be found."
+>
+
+<section class="error-page">
+  <img
+    src="/images/dhh-fleur-official.png"
+    alt=""
+    class="error-mark"
+  />
+
+  <h1>Page Not Found</h1>
+
+  <p>
+    The page you're looking for couldn't be found.
+  </p>
+
+  <p>
+    It may have moved, the address may have been typed incorrectly,
+    or the link may no longer exist.
+  </p>
+
+  <p>
+    Please use one of the options below to continue exploring
+    Divine Health Homeopathy.
+  </p>
+
+  <div class="error-actions">
+  <Button href="/">
+    Return Home
+  </Button>
+
+  <Button
+    href="/resources"
+    variant="secondary"
+  >
+    Explore Resources
+  </Button>
+
+  <Button
+    href="/consultations"
+    variant="gold"
+  >
+    Schedule Consultation
+  </Button>
+</div>
+</section>
+
+</Layout>
+
+<style>
+.error-page{
+    max-width:760px;
+    margin:0 auto;
+    padding:6rem 1.5rem 7rem;
+    text-align:center;
+}
+
+.error-mark{
+    width:96px;
+    margin-bottom:2rem;
+}
+
+.error-page h1{
+    margin-bottom:1.25rem;
+}
+
+.error-page p{
+    max-width:620px;
+    margin:0 auto 1rem;
+}
+
+.error-actions{
+    margin-top:2.5rem;
+
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+@media (max-width:700px){
+
+.error-page{
+    padding:4rem 1.25rem 5rem;
+}
+
+.error-actions{
+    flex-direction:column;
+    align-items:center;
+}
+}
+</style>
