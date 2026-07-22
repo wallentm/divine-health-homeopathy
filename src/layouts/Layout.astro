@@ -7,14 +7,46 @@ import "../styles/global.css";
 const {
   title = "Divine Health Homeopathy",
   description = "Classical homeopathy consultations with Mindy Wallent.",
+  image = "/images/social-preview.jpg",
+  noindex = false,
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
 ---
 
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="robots"
+      content={noindex ? "noindex,nofollow" : "index,follow"}
+    />
+
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta name="theme-color" content="#0f2a4d" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Divine Health Homeopathy" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image:alt" content="Divine Health Homeopathy" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <meta name="twitter:image:alt" content="Divine Health Homeopathy" />
   </head>
 
   <body>
