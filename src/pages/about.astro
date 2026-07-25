@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import ProtectedImage from "../components/ProtectedImage.astro";
 import SectionDivider from "../components/SectionDivider.astro";
 import Button from "../components/Button.astro";
+const contactEmail =
+  "mailto:Mindy@DivineHealthHomeopathy.com?subject=Consultation%20Inquiry&body=Hello%20Mindy%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20classical%20homeopathy%20and%20working%20with%20you.%0A%0AThe%20health%20concerns%20I%20am%20seeking%20support%20with%20are%3A%0A%0A";
 ---
 
 <Layout
@@ -343,11 +345,13 @@ import Button from "../components/Button.astro";
         </div>
 
         <p class="schedule-note">
-  Before scheduling, please request
-  <strong> "Mindy Wallent" </strong> in the
-  <em> Student Practitioner</em> field when submitting your consultation
-  request through Homeopathy Help Network by clicking the
-  <strong> Schedule Consultation </strong> button below.
+  <strong>For acute appointments: </strong>
+  Please reach out to Mindy first to discuss your situation and receive her current availability by clicking the <strong>Contact Mindy</strong> button below.
+</p>
+
+<p class="schedule-note">
+  <strong>For chronic appointments: </strong>
+  Please request <strong>"Mindy Wallent"</strong> in the <em>Student Practitioner</em> field when submitting your consultation request through Homeopathy Help Network by clicking the <strong>Schedule Consultation</strong> button below.
 </p>
 
 <div class="about-actions">
@@ -361,6 +365,10 @@ import Button from "../components/Button.astro";
     variant="primary"
   >
     Schedule Consultation
+  </Button>
+
+  <Button href={contactEmail} variant="gold">
+    Contact Mindy
   </Button>
 </div>
 
