@@ -1,6 +1,10 @@
 <header class="dhh-header">
   <div class="dhh-header-inner">
-    <a href="/" class="dhh-brand" aria-label="Divine Health Homeopathy home">
+    <a
+      href="/"
+      class="dhh-brand"
+      aria-label="Divine Health Homeopathy home"
+    >
       <img
         src="/images/dhh-fleur-official.png"
         alt=""
@@ -13,23 +17,126 @@
       </span>
     </a>
 
-    <nav class="dhh-nav" aria-label="Main navigation">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/consultations">Consultations</a>
-  <a href="/faq">FAQ</a>
-  <a href="/resources">Resources</a>
+    <!-- Desktop navigation -->
+    <nav class="dhh-nav dhh-desktop-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/consultations">Consultations</a>
+      <a href="/faq">FAQ</a>
+      <a href="/resources">Resources</a>
 
-  <a
-  href="/consultations"
-  class="dhh-nav-button"
->
-  Schedule Consultation
-</a>
-</nav>
+      <a href="/consultations" class="dhh-nav-button">
+        Schedule Consultation
+      </a>
+    </nav>
 
+    <!-- Mobile menu button -->
+    <button
+      class="dhh-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="dhh-mobile-navigation"
+    >
+      <span class="dhh-menu-line"></span>
+      <span class="dhh-menu-line"></span>
+      <span class="dhh-menu-line"></span>
+    </button>
+
+    <!-- Mobile navigation -->
+    <nav
+      id="dhh-mobile-navigation"
+      class="dhh-mobile-nav"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/consultations">Consultations</a>
+      <a href="/faq">FAQ</a>
+      <a href="/resources">Resources</a>
+
+      <a href="/consultations" class="dhh-nav-button">
+        Schedule Consultation
+      </a>
+    </nav>
   </div>
 </header>
+
+<script>
+  const header = document.querySelector(".dhh-header");
+  const menuButton = document.querySelector(".dhh-menu-toggle");
+  const mobileNav = document.querySelector(".dhh-mobile-nav");
+
+  function closeMobileMenu() {
+    if (!(menuButton instanceof HTMLButtonElement)) return;
+    if (!(mobileNav instanceof HTMLElement)) return;
+
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation menu");
+    mobileNav.setAttribute("aria-hidden", "true");
+
+    menuButton.classList.remove("is-open");
+    mobileNav.classList.remove("is-open");
+  }
+
+  function openMobileMenu() {
+    if (!(menuButton instanceof HTMLButtonElement)) return;
+    if (!(mobileNav instanceof HTMLElement)) return;
+
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Close navigation menu");
+    mobileNav.setAttribute("aria-hidden", "false");
+
+    menuButton.classList.add("is-open");
+    mobileNav.classList.add("is-open");
+  }
+
+  if (
+    header instanceof HTMLElement &&
+    menuButton instanceof HTMLButtonElement &&
+    mobileNav instanceof HTMLElement
+  ) {
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!(event.target instanceof Node)) return;
+
+      if (
+        menuButton.getAttribute("aria-expanded") === "true" &&
+        !header.contains(event.target)
+      ) {
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMobileMenu();
+        menuButton.focus();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 950) {
+        closeMobileMenu();
+      }
+    });
+  }
+</script>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
@@ -38,15 +145,20 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+
     background: rgba(251, 247, 239, 0.97);
     border-bottom: 1px solid #e8e2d7;
+
     backdrop-filter: blur(10px);
   }
 
   .dhh-header-inner {
+    position: relative;
+
     max-width: 1200px;
     margin: 0 auto;
     padding: 8px 40px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,17 +169,22 @@
     display: flex;
     align-items: center;
     gap: 13px;
-    text-decoration: none;
+
     color: var(--navy);
+    text-decoration: none;
+
     flex-shrink: 0;
+
     animation: headerFade 0.55s ease both;
   }
 
   .dhh-brand-mark {
     width: 68px;
     height: 68px;
-    object-fit: contain;
+
     display: block;
+    object-fit: contain;
+
     transition: transform 0.3s ease;
   }
 
@@ -75,49 +192,58 @@
     transform: rotate(-6deg) scale(1.04);
   }
 
- .dhh-brand-text {
+  .dhh-brand-text {
     display: flex;
     flex-direction: column;
+
     line-height: 1;
-}
+  }
 
   .dhh-brand-script {
+    color: var(--navy);
+
     font-family: "Alex Brush", cursive;
     font-size: 3rem;
     font-weight: 400;
-    color: var(--navy);
   }
 
   .dhh-brand-subtitle {
     margin-top: -2px;
 
-    font-size: 0.88rem;
-    font-weight: 700;
+    display: block;
 
-    letter-spacing: 0.50em;
-
-    text-transform: uppercase;
     color: var(--navy);
 
-    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.5em;
     text-align: center;
-}
+    text-transform: uppercase;
+  }
+
   .dhh-nav {
+    margin-left: auto;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
-    margin-left: auto;
+
     transform: translateX(12px);
+
     animation: headerFade 0.7s ease 0.1s both;
   }
 
   .dhh-nav a {
-    text-decoration: none;
     color: #43546d;
+
     font-size: 1.02rem;
     font-weight: 600;
-    transition: color 0.25s ease, transform 0.25s ease;
+    text-decoration: none;
+
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease;
   }
 
   .dhh-nav a:hover {
@@ -126,22 +252,31 @@
   }
 
   .dhh-nav-button {
-    background: var(--gold);
-    color: white !important;
-
     padding: 10px 22px;
 
-    border-radius: 999px;
-    font-weight: 700;
+    color: white !important;
+    background: var(--gold);
 
+    border-radius: 999px;
+
+    font-weight: 700;
     white-space: nowrap;
 
-    box-shadow: 0 12px 28px rgba(184,154,94,.24);
-}
+    box-shadow: 0 12px 28px rgba(184, 154, 94, 0.24);
+  }
 
   .dhh-nav-button:hover {
-    background: var(--navy);
     color: white !important;
+    background: var(--navy);
+  }
+
+  /*
+   * Mobile elements remain hidden on desktop.
+   */
+
+  .dhh-menu-toggle,
+  .dhh-mobile-nav {
+    display: none;
   }
 
   @keyframes headerFade {
@@ -158,28 +293,255 @@
 
   @media (max-width: 950px) {
     .dhh-header-inner {
-      flex-direction: column;
-      padding: 16px 24px;
-      gap: 18px;
+      padding: 8px 18px;
+
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
     }
 
-    .dhh-nav {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px;
+    /*
+     * Hide the desktop navigation.
+     */
+
+    .dhh-desktop-nav {
+      display: none;
     }
 
-    .dhh-brand-script {
-      font-size: 2.35rem;
+    /*
+     * Slightly smaller mobile branding.
+     */
+
+    .dhh-brand {
+      min-width: 0;
+      gap: 9px;
     }
 
     .dhh-brand-mark {
-      width: 56px;
-      height: 56px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .dhh-brand-script {
+      font-size: 2rem;
     }
 
     .dhh-brand-subtitle {
-      font-size: 0.68rem;
+      margin-top: -1px;
+
+      font-size: 0.56rem;
+      letter-spacing: 0.42em;
+    }
+
+    /*
+     * Hamburger button.
+     */
+
+    .dhh-menu-toggle {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      flex-shrink: 0;
+
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.48);
+
+      border: 1px solid rgba(15, 42, 77, 0.18);
+      border-radius: 50%;
+
+      cursor: pointer;
+
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .dhh-menu-toggle:hover {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: rgba(15, 42, 77, 0.3);
+    }
+
+    .dhh-menu-toggle:focus-visible {
+      outline: 3px solid rgba(184, 154, 94, 0.4);
+      outline-offset: 3px;
+    }
+
+    .dhh-menu-line {
+      width: 20px;
+      height: 2px;
+
+      display: block;
+
+      background: var(--navy);
+      border-radius: 999px;
+
+      transform-origin: center;
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.2s ease;
+    }
+
+    /*
+     * Animate the hamburger into an X.
+     */
+
+    .dhh-menu-toggle.is-open .dhh-menu-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .dhh-menu-toggle.is-open .dhh-menu-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .dhh-menu-toggle.is-open .dhh-menu-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /*
+     * Mobile dropdown.
+     */
+
+    .dhh-mobile-nav {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 18px;
+
+      width: min(310px, calc(100vw - 36px));
+      padding: 14px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+
+      visibility: hidden;
+      opacity: 0;
+
+      background: rgba(251, 247, 239, 0.99);
+
+      border: 1px solid #e8e2d7;
+      border-radius: 16px;
+
+      box-shadow: 0 20px 50px rgba(15, 42, 77, 0.2);
+
+      transform: translateY(-10px) scale(0.98);
+      transform-origin: top right;
+
+      pointer-events: none;
+
+      transition:
+        opacity 0.22s ease,
+        transform 0.22s ease,
+        visibility 0.22s ease;
+    }
+
+    .dhh-mobile-nav.is-open {
+      visibility: visible;
+      opacity: 1;
+
+      transform: translateY(0) scale(1);
+
+      pointer-events: auto;
+    }
+
+    .dhh-mobile-nav a {
+      padding: 11px 12px;
+
+      color: #43546d;
+
+      border-radius: 9px;
+
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .dhh-mobile-nav a:hover,
+    .dhh-mobile-nav a:focus-visible {
+      color: var(--gold);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .dhh-mobile-nav .dhh-nav-button {
+      margin-top: 8px;
+      padding: 12px 18px;
+
+      color: white !important;
+      text-align: center;
+      background: var(--gold);
+    }
+
+    .dhh-mobile-nav .dhh-nav-button:hover,
+    .dhh-mobile-nav .dhh-nav-button:focus-visible {
+      color: white !important;
+      background: var(--navy);
+    }
+  }
+
+  /*
+   * Extra-small phones.
+   */
+
+  @media (max-width: 390px) {
+    .dhh-header-inner {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
+
+    .dhh-brand-mark {
+      width: 43px;
+      height: 43px;
+    }
+
+    .dhh-brand-script {
+      font-size: 1.78rem;
+    }
+
+    .dhh-brand-subtitle {
+      font-size: 0.5rem;
+      letter-spacing: 0.36em;
+    }
+
+    .dhh-menu-toggle {
+      width: 42px;
+      height: 42px;
+    }
+
+    .dhh-mobile-nav {
+      right: 14px;
+      width: calc(100vw - 28px);
+    }
+  }
+
+  /*
+   * Respect visitors who prefer reduced motion.
+   */
+
+  @media (prefers-reduced-motion: reduce) {
+    .dhh-brand,
+    .dhh-nav {
+      animation: none;
+    }
+
+    .dhh-brand-mark,
+    .dhh-menu-toggle,
+    .dhh-menu-line,
+    .dhh-mobile-nav {
+      transition: none;
     }
   }
 </style>
