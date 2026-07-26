@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://divinehealthhomeopathy.com',
+  site: 'https://www.divinehealthhomeopathy.com',
   integrations: [sitemap()],
 });
