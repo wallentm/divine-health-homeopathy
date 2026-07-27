@@ -13,11 +13,49 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(image, Astro.site);
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.divinehealthhomeopathy.com/#organization",
+  name: "Divine Health Homeopathy",
+  url: "https://www.divinehealthhomeopathy.com/",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.divinehealthhomeopathy.com/images/dhh-organization-logo.png",
+    width: 1024,
+    height: 1024,
+  },
+  image:
+    "https://www.divinehealthhomeopathy.com/images/dhh-organization-logo.png",
+  description:
+    "Divine Health Homeopathy provides individualized classical homeopathy consultations and educational resources.",
+  email: "mailto:mindy@divinehealthhomeopathy.com",
+  telephone: "+1-734-767-6085",
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61590750608029",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.divinehealthhomeopathy.com/#website",
+  url: "https://www.divinehealthhomeopathy.com/",
+  name: "Divine Health Homeopathy",
+  description:
+    "Individualized classical homeopathy consultations and educational resources.",
+  publisher: {
+    "@id": "https://www.divinehealthhomeopathy.com/#organization",
+  },
+  inLanguage: "en-US",
+};
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1"
@@ -45,28 +83,41 @@ const socialImageURL = new URL(image, Astro.site);
       content="#0f2a4d"
     />
 
-    <meta name="msvalidate.01" content="BE57F1CB01C5E96E4F8A7D18C4FF1CEC" />
+    <!-- Bing Webmaster Verification -->
+
+    <meta
+      name="msvalidate.01"
+      content="BE57F1CB01C5E96E4F8A7D18C4FF1CEC"
+    />
 
     <!-- Favicons -->
 
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      href="/favicon.ico"
+      sizes="any"
+    />
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="/favicon-32x32.png"
     />
+
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="/favicon-16x16.png"
     />
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="/apple-touch-icon.png"
     />
+
     <link
       rel="manifest"
       href="/site.webmanifest"
@@ -74,24 +125,36 @@ const socialImageURL = new URL(image, Astro.site);
 
     <!-- Open Graph -->
 
-    <meta property="og:type" content="website" />
+    <meta
+      property="og:type"
+      content="website"
+    />
+
     <meta
       property="og:site_name"
       content="Divine Health Homeopathy"
     />
-    <meta property="og:title" content={title} />
+
+    <meta
+      property="og:title"
+      content={title}
+    />
+
     <meta
       property="og:description"
       content={description}
     />
+
     <meta
       property="og:url"
       content={canonicalURL}
     />
+
     <meta
       property="og:image"
       content={socialImageURL}
     />
+
     <meta
       property="og:image:alt"
       content="Divine Health Homeopathy"
@@ -103,22 +166,38 @@ const socialImageURL = new URL(image, Astro.site);
       name="twitter:card"
       content="summary_large_image"
     />
+
     <meta
       name="twitter:title"
       content={title}
     />
+
     <meta
       name="twitter:description"
       content={description}
     />
+
     <meta
       name="twitter:image"
       content={socialImageURL}
     />
+
     <meta
       name="twitter:image:alt"
       content="Divine Health Homeopathy"
     />
+
+    <!-- Structured Data -->
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(organizationSchema)}
+    ></script>
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchema)}
+    ></script>
   </head>
 
   <body>
