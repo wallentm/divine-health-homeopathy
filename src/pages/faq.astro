@@ -8,11 +8,140 @@ const scheduleUrl = "https://homeopathyhelpnow.com/services/";
 
 const contactEmail =
   "mailto:Mindy@DivineHealthHomeopathy.com?subject=Question%20About%20Classical%20Homeopathy&body=Hello%20Mindy%2C%0A%0AI%20have%20a%20question%20about%20classical%20homeopathy%3A%0A%0A";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.divinehealthhomeopathy.com/faq/#faqpage",
+  url: "https://www.divinehealthhomeopathy.com/faq/",
+  name: "Homeopathy FAQ",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What is classical homeopathy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Classical Homeopathy is an individualized system of medicine founded by the German physician Dr. Samuel Hahnemann. Rather than treating a diagnosis alone, Classical Homeopathy considers the complete picture of a person's physical, mental, and emotional symptoms to select a single remedy uniquely matched to the individual. It is founded on the Law of Similars and emphasizes individualized treatment and careful observation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who was Samuel Hahnemann?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dr. Samuel Hahnemann (1755–1843) was a physician, chemist, linguist, translator, and medical scholar whose work established the principles of Classical Homeopathy. Through careful observation, experimentation, and scientific inquiry, he recognized the therapeutic principle known as the Law of Similars and documented it in the Organon of Medicine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why might two people with the same diagnosis receive different remedies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Classical Homeopathy selects remedies according to each person's unique symptom picture rather than the diagnosis alone. Individual characteristics such as temperature preferences, sleep patterns, emotional responses, and other distinguishing symptoms help determine the most appropriate remedy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'one remedy at a time' mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Classical Homeopathy generally uses one carefully selected remedy at a time so the individual's response can be clearly observed. The remedy may later be repeated, adjusted, changed, or allowed more time depending on the person's response."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is homeopathy different from herbal medicine or supplements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Homeopathy, herbal medicine, and nutritional supplements are distinct approaches. Herbal products and supplements contain measurable substances, while homeopathic remedies are prepared through serial dilution and succussion and are selected according to an individual's unique symptom picture."
+      }
+    },
+
+    // Understanding the remedies
+
+    {
+      "@type": "Question",
+      "name": "What are homeopathic remedies made from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Homeopathic remedies originate from substances found in the mineral, plant, and animal kingdoms. They are prepared according to the standards of the Homeopathic Pharmacopoeia of the United States (HPUS), the official compendium recognized by the U.S. Food and Drug Administration for homeopathic medicines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are homeopathic remedies prepared?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Homeopathic remedies are prepared through a process of serial dilution followed by vigorous shaking known as succussion. Lower and higher potencies reflect different stages of this preparation process. Remedies are selected according to an individual's unique symptom picture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are homeopathic pellets so small?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The small pellets act as carriers for the prepared homeopathic remedy. Their size does not determine the potency or whether a remedy is appropriate for an individual's case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should remedies be stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Homeopathic remedies are generally stored in their original containers in a cool, dry place away from direct sunlight, excessive heat, moisture, and strong odors. Follow the storage recommendations provided by the manufacturer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are remedies not always taken every day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The timing and repetition of a homeopathic remedy depend on the individual's case, the remedy potency, the condition being addressed, and the person's response. A classically trained homeopath carefully evaluates follow-up observations before recommending when a remedy should be repeated, adjusted, or allowed more time to act."
+      }
+    },
+
+    // Children & Families
+
+    {
+      "@type": "Question",
+      "name": "Can children receive individualized homeopathic care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Children may receive individualized homeopathic care with a parent or legal guardian participating in the consultation. The homeopath considers the child's complete symptom picture, health history, and observations provided by both the child and parent when appropriate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can infants receive homeopathic care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Infants may also be considered for individualized homeopathic care. Because they cannot describe their symptoms verbally, careful observations from parents and caregivers become especially important in understanding the infant's individual symptom picture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can several members of one family receive care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each family member is evaluated as an individual case. Even relatives with similar health concerns may require different homeopathic remedies because remedy selection is based on each person's unique symptom picture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do children receive the same remedies as adults?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Homeopathic remedies are selected according to an individual's unique symptom picture rather than age alone. Children and adults may sometimes receive the same remedy when it is the best match for their individual case."
+      }
+    }
+  ]
+};
 ---
 
 <Layout
   title="Homeopathy FAQ | Divine Health Homeopathy"
   description="Find answers to common questions about classical homeopathy, remedies, consultations, safety, homeopathy's history and much more."
+  structuredData={faqSchema}
 >
   <main>
 
@@ -437,7 +566,7 @@ const contactEmail =
               <p>
                 Remedies are generally stored in their original containers in a
                 cool, dry place away from direct sunlight, strong odors,
-                excessive heat, and moisture. It is also good practice to store remedies away from energy waves like microwaves. If your remedy is liquid, refrigeration also helps. Follow all guidelines given by the manufacturer.
+                excessive heat, and moisture. It is also good practice to store remedies away from energy sources like computers and microwaves. If your remedy is liquid, refrigeration also helps. Follow all guidelines given by the manufacturer.
 
               </p>
             </div>
