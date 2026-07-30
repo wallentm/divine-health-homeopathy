@@ -5,11 +5,39 @@ import SectionDivider from "../components/SectionDivider.astro";
 import Button from "../components/Button.astro";
 const contactEmail =
   "mailto:Mindy@DivineHealthHomeopathy.com?subject=Consultation%20Inquiry&body=Hello%20Mindy%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20classical%20homeopathy%20and%20working%20with%20you.%0A%0AThe%20health%20concerns%20I%20am%20seeking%20support%20with%20are%3A%0A%0A";
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.divinehealthhomeopathy.com/about#person",
+  name: "Mindy Wallent",
+  url: "https://www.divinehealthhomeopathy.com/about",
+  image: {
+    "@type": "ImageObject",
+    url: "https://www.divinehealthhomeopathy.com/images/mindy-about.jpg",
+  },
+  jobTitle: "Classical Homeopath",
+  description:
+    "Mindy Wallent is the founder of Divine Health Homeopathy, a classical homeopath, former nurse, and mother of four whose personal and family experiences inspired her study and practice of individualized classical homeopathy.",
+  worksFor: {
+    "@id": "https://www.divinehealthhomeopathy.com/#organization",
+  },
+  knowsAbout: [
+    "Classical homeopathy",
+    "Individualized homeopathy",
+    "Homeopathic consultations",
+  ],
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://www.divinehealthhomeopathy.com/about",
+  },
+};
 ---
 
 <Layout
   title="About Mindy | Divine Health Homeopathy"
   description="Meet Mindy Wallent, founder of Divine Health Homeopathy, and learn how her experience as a nurse, mother, and seeker of Truth led her to classical homeopathy."
+  structuredData={personSchema}
 >
   <main>
 

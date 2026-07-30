@@ -9,10 +9,14 @@ const {
   description = "Classical homeopathy consultations with Mindy Wallent.",
   image = "/images/social-preview.jpg",
   noindex = false,
+  structuredData = [],
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(image, Astro.site);
+const pageStructuredData = Array.isArray(structuredData)
+  ? structuredData
+  : [structuredData];
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -187,7 +191,7 @@ const websiteSchema = {
       content="Divine Health Homeopathy"
     />
 
-    <!-- Structured Data -->
+        <!-- Structured Data -->
 
     <script
       type="application/ld+json"
@@ -198,6 +202,15 @@ const websiteSchema = {
       type="application/ld+json"
       set:html={JSON.stringify(websiteSchema)}
     ></script>
+
+    {
+      pageStructuredData.map((schema) => (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(schema)}
+        ></script>
+      ))
+    }
   </head>
 
   <body>
