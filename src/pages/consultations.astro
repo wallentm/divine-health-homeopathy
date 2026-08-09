@@ -81,7 +81,7 @@ const contactEmail =
 
       <cite>
         Samuel Hahnemann,
-        <em>Organon of Medicine</em>,
+        <em> Organon of Medicine</em>,
         Aphorism 2
       </cite>
     </blockquote>
@@ -747,7 +747,7 @@ const contactEmail =
 
     color: rgba(184, 154, 94, 0.22);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 9rem;
+    font-size: 5.5rem;
     line-height: 1;
 
     pointer-events: none;
@@ -755,8 +755,8 @@ const contactEmail =
   }
 
   .quote-mark-open {
-    left: 90;
-    top: -20px;
+    left: 110px;
+    top: 8px;
   }
 
   .quote-mark-close-inline {
@@ -1367,133 +1367,145 @@ const contactEmail =
     line-height: 1.5;
   }
 
-  /*
-   * Tablet
-   */
+/*
+ * Tablet
+ */
 
-  @media (max-width: 940px) {
-    .difference-inner,
-    .right-for-me-inner {
-      grid-template-columns: 1fr;
-      gap: 52px;
-    }
-
-    .difference-heading,
-    .right-for-me-copy {
-      text-align: center;
-    }
-
-    .divider-left,
-    .gold-divider {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .timeline::before {
-      left: 29px;
-    }
-
-    .timeline-step,
-    .step-right {
-      width: 100%;
-      margin-left: 0;
-      padding-left: 86px;
-      padding-right: 0;
-    }
-
-    .step-left .timeline-marker,
-    .step-right .timeline-marker {
-      left: 0;
-      right: auto;
-    }
-
-    .right-for-me-copy > p:not(.eyebrow) {
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .reassurance-card {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .quote-mark-open {
-  left: 36px;
-}
+@media (max-width: 940px) {
+  .difference-inner,
+  .right-for-me-inner {
+    grid-template-columns: 1fr;
+    gap: 52px;
   }
 
-  /*
-   * Mobile
-   */
+  .difference-heading,
+  .right-for-me-copy {
+    text-align: center;
+  }
 
-  @media (max-width: 650px) {
-    .consultation-hero {
-      padding: 67px 20px 79px;
-    }
+  .divider-left,
+  .gold-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    h1 {
-      font-size: 3.35rem;
-    }
+  .timeline::before {
+    left: 29px;
+  }
 
-    h2 {
-      font-size: 2.55rem;
-    }
+  .timeline-step,
+  .step-right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 86px;
+    padding-right: 0;
+  }
 
-    .hero-copy {
-      font-size: 1.08rem;
-    }
+  .step-left .timeline-marker,
+  .step-right .timeline-marker {
+    left: 0;
+    right: auto;
+  }
 
-    .hero-actions,
-    .cta-actions {
-      flex-direction: column;
-      align-items: stretch;
-    }
+  .right-for-me-copy > p:not(.eyebrow) {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .quote-section {
-      padding: 58px 20px;
-    }
+  .reassurance-card {
+    max-width: 720px;
+    margin: 0 auto;
+  }
 
-    .quote-inner {
-      padding: 8px;
-    }
+  .quote-inner {
+    padding: 20px 70px 18px;
+  }
 
-    .quote-mark {
-      display: none;
-    }
-    .quote-mark-close-inline {
-  font-size: 1.65em;
-  vertical-align: -0.24em;
+  .quote-mark-open {
+    left: 36px;
+    top: 8px;
+  }
 }
 
-    .difference-section,
-    .right-for-me,
-    .consultation-faq,
-    .consultation-cta {
-      padding: 82px 20px;
-    }
+/*
+ * Mobile
+ */
 
-    .process-intro {
-      padding: 82px 20px 58px;
-    }
+@media (max-width: 650px) {
+  .consultation-hero {
+    padding: 67px 20px 79px;
+  }
 
-    .timeline-section {
-      padding: 20px 20px 88px;
-    }
+  h1 {
+    font-size: 3.35rem;
+  }
 
-    .timeline::before {
-      display: none;
-    }
+  h2 {
+    font-size: 2.55rem;
+  }
 
-    .timeline-step,
-    .step-right {
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      margin-left: 0;
-      margin-bottom: 46px;
-    }
+  .hero-copy {
+    font-size: 1.08rem;
+  }
 
+  .hero-actions,
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quote-section {
+    padding: 58px 20px;
+  }
+
+  .quote-inner {
+    padding: 8px 20px;
+  }
+
+  .quote-mark {
+    display: block;
+    font-size: 4.5rem;
+  }
+
+  .quote-mark-open {
+    left: 54px;
+    top: -4px;
+  }
+
+  .quote-mark-close-inline {
+    font-size: 1.65em;
+    vertical-align: -0.24em;
+  }
+
+  .difference-section,
+  .right-for-me,
+  .consultation-faq,
+  .consultation-cta {
+    padding: 82px 20px;
+  }
+
+  .process-intro {
+    padding: 82px 20px 58px;
+  }
+
+  .timeline-section {
+    padding: 20px 20px 88px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-step,
+  .step-right {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-bottom: 46px;
+  }
+   
     .timeline-marker {
       position: static;
 
