@@ -66,7 +66,7 @@
       </article>
     </div>
 
-    <!-- PAST TALKS -->
+        <!-- PAST TALKS -->
     <div class="past-talks">
       <div class="past-heading">
         <span></span>
@@ -74,45 +74,20 @@
         <span></span>
       </div>
 
-      <article class="talk-card past-card">
-
+      <div class="past-flyer-card">
         <div class="flyer-wrap past-flyer-wrap">
           <img
             src="/images/understanding-homeopathy-2026.png"
             alt="Understanding Homeopathy Principles Practice and Philosophy educational presentation flyer"
             class="talk-flyer past-flyer"
+            loading="lazy"
           />
 
           <div class="past-overlay">
             <span>Past Talk</span>
           </div>
         </div>
-
-        <div class="talk-content past-content">
-          <p class="talk-type">Educational Presentation</p>
-
-          <h3>Understanding Homeopathy</h3>
-
-          <p class="talk-topic">
-            Principles, Practice, and Philosophy
-          </p>
-
-          <p class="talk-description">
-            An introduction to the history, philosophy, foundational
-            principles, individualized approach, and practical use of
-            classical homeopathy.
-          </p>
-
-          <div class="event-details">
-            <p>
-              <strong>August 19, 2026</strong>
-            </p>
-            <p>Optimal Wellness Chiropractic</p>
-            <p>Bad Axe, Michigan</p>
-          </div>
-        </div>
-
-      </article>
+      </div>
     </div>
 
   </div>
@@ -308,10 +283,19 @@
     color: #173a6a;
   }
 
-  .past-card {
-    background: rgba(255, 253, 248, 0.75);
-    box-shadow: none;
-  }
+  .past-flyer-card {
+  width: min(360px, 100%);
+  margin: 0 auto;
+}
+
+.past-flyer-wrap {
+  width: 100%;
+}
+
+.past-flyer {
+  width: 100%;
+  height: auto;
+}
 
   .past-flyer {
     opacity: 0.78;

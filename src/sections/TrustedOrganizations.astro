@@ -72,9 +72,10 @@ const organizations = [
   }
 
   .section-heading {
-    max-width: 760px;
-    margin-bottom: 48px;
-  }
+  width: min(760px, 100%);
+  margin: 0 auto 48px;
+  text-align: center;
+}
 
   .eyebrow {
     margin: 0 0 12px;
@@ -92,14 +93,17 @@ const organizations = [
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 500;
     line-height: 1.08;
+    text-align: center;
   }
 
   .section-intro {
-    margin: 20px 0 0;
-    color: #535c63;
-    font-size: 1.05rem;
-    line-height: 1.8;
-  }
+  width: min(680px, 100%);
+  margin: 20px auto 0;
+  color: #535c63;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+}
 
   .organization-grid {
     display: grid;
