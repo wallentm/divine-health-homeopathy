@@ -60,21 +60,30 @@ import Layout from "../../../layouts/Layout.astro";
         </div>
 
         <figure class="infographic">
-          <a
-            href="/images/history/mother-teresa-homeopathy-infographic.png"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/images/history/mother-teresa-homeopathy-infographic.png"
-              alt="Mother Teresa Homeopathy in History infographic presenting historical evidence of her connection with homeopathy"
-            />
-          </a>
+  <div
+    class="protected-infographic"
+    oncontextmenu="return false;"
+  >
+    <img
+      src="/images/history/mother-teresa-homeopathy-infographic.png"
+      alt="Mother Teresa Homeopathy in History infographic presenting historical evidence of her connection with homeopathy"
+      class="infographic-image"
+      draggable="false"
+    />
 
-          <figcaption>
-            Divine Health Homeopathy — Homeopathy in History
-          </figcaption>
-        </figure>
+    <div class="infographic-watermark" aria-hidden="true">
+      <img
+        src="/images/dhh-logo-translucent-web.png"
+        alt=""
+        draggable="false"
+      />
+    </div>
+  </div>
+
+  <figcaption>
+    Divine Health Homeopathy — Homeopathy in History
+  </figcaption>
+</figure>
 
       </div>
     </section>
@@ -585,30 +594,69 @@ import Layout from "../../../layouts/Layout.astro";
   }
 
   .infographic {
-    max-width: 820px;
-    margin: 0 auto;
-  }
+  max-width: 820px;
+  margin: 0 auto;
+}
 
-  .infographic a {
-    display: block;
-  }
+.protected-infographic {
+  position: relative;
+  overflow: hidden;
 
-  .infographic img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid rgba(184, 147, 59, 0.35);
-    box-shadow: 0 18px 50px rgba(23, 58, 106, 0.12);
-  }
+  border-radius: 10px;
+  border: 1px solid rgba(184, 147, 59, 0.35);
 
-  .infographic figcaption {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.82rem;
-    font-style: italic;
-    color: #6f6f6f;
-  }
+  box-shadow:
+    0 18px 50px rgba(23, 58, 106, 0.12);
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.infographic-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.infographic-watermark {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 2;
+
+  width: 145px;
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  background: rgba(251, 247, 239, 0.88);
+
+  pointer-events: none;
+}
+
+.infographic-watermark img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  opacity: 0.92;
+
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.infographic figcaption {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #6f6f6f;
+}
 
   .article-body {
     padding: 5rem 0 7rem;
@@ -724,28 +772,35 @@ import Layout from "../../../layouts/Layout.astro";
   }
 
   @media (max-width: 640px) {
-    .article-container {
-      width: min(100% - 2rem, 940px);
-    }
-
-    .article-hero {
-      padding: 4.5rem 0 3.5rem;
-    }
-
-    .infographic-section {
-      padding: 3.5rem 0;
-    }
-
-    .article-body {
-      padding: 3.5rem 0 5rem;
-    }
-
-    .article-copy section + section {
-      margin-top: 3.5rem;
-    }
-
-    .sources-section {
-      padding: 1.5rem;
-    }
+  .article-container {
+    width: min(100% - 2rem, 940px);
   }
+
+  .article-hero {
+    padding: 4.5rem 0 3.5rem;
+  }
+
+  .infographic-section {
+    padding: 3.5rem 0;
+  }
+
+  .infographic-watermark {
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    padding: 6px 8px;
+  }
+
+  .article-body {
+    padding: 3.5rem 0 5rem;
+  }
+
+  .article-copy section + section {
+    margin-top: 3.5rem;
+  }
+
+  .sources-section {
+    padding: 1.5rem;
+  }
+}
 </style>
