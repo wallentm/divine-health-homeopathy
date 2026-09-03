@@ -1,0 +1,171 @@
+<section class="talk-announcement" aria-labelledby="upcoming-talk-title">
+  <div class="announcement-inner">
+
+    <p class="announcement-eyebrow">
+      Upcoming Free Educational Talk
+    </p>
+
+    <h2 id="upcoming-talk-title">
+      Learn How Homeopathy Can Help You This Winter
+    </h2>
+
+    <p class="announcement-topic">
+      Acute Treatment of Colds
+    </p>
+
+    <p class="announcement-details">
+      November 4, 2026
+      <span aria-hidden="true">•</span>
+      7 PM Eastern
+      <span aria-hidden="true">•</span>
+      Live on Zoom
+    </p>
+
+    <a
+      href="/resources#educational-talks"
+      class="announcement-button"
+    >
+      View Talk Details
+      <span aria-hidden="true">→</span>
+    </a>
+
+  </div>
+</section>
+
+<style>
+  .talk-announcement {
+    padding: 2.75rem 1.25rem;
+    background: #fbf7ef;
+  }
+
+  .announcement-inner {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    padding: 2rem 2.25rem;
+
+    text-align: center;
+
+    border: 1px solid rgba(184, 147, 59, 0.45);
+    border-radius: 18px;
+
+    background: #fffdf8;
+
+    box-shadow:
+      0 12px 30px rgba(23, 58, 106, 0.07);
+  }
+
+  .announcement-eyebrow {
+    margin: 0 0 0.75rem;
+
+    color: #a77f37;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .announcement-inner h2 {
+    max-width: 620px;
+    margin: 0 auto;
+
+    color: #173a6a;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 500;
+    line-height: 1.05;
+  }
+
+  .announcement-topic {
+    margin: 0.65rem 0 0;
+
+    color: #718b62;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+
+  .announcement-details {
+    margin: 1rem 0 0;
+
+    color: #383838;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .announcement-details span {
+    margin: 0 0.4rem;
+    color: #b8933b;
+  }
+
+  .announcement-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    margin-top: 1.35rem;
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid #173a6a;
+    border-radius: 999px;
+
+    background: #173a6a;
+    color: #fff;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .announcement-button:hover {
+    background: transparent;
+    color: #173a6a;
+    transform: translateY(-2px);
+  }
+
+  .announcement-button span {
+    transition: transform 0.2s ease;
+  }
+
+  .announcement-button:hover span {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 640px) {
+    .talk-announcement {
+      padding: 2rem 1rem;
+    }
+
+    .announcement-inner {
+      padding: 1.6rem 1.25rem;
+      border-radius: 15px;
+    }
+
+    .announcement-inner h2 {
+      font-size: 2rem;
+    }
+
+    .announcement-topic {
+      font-size: 1.15rem;
+    }
+
+    .announcement-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .announcement-details span {
+      display: none;
+    }
+  }
+</style>
