@@ -674,9 +674,9 @@ import Layout from "../../../layouts/Layout.astro";
       </p>
 
       <p>
-        Dr. Rubini's method during this epidemic was distinctive. His treatment
-        centered heavily upon camphor and became increasingly standardized
-        around it.
+        Dr. Rubini's method during this epidemic was distinctive. His treatment centered heavily upon a preparation he 
+        called camphorated alcohol—a saturated solution of camphor in highly rectified alcohol—and became increasingly standardized around it. 
+        Rubini described preparing it by dissolving equal weights of camphor and highly rectified alcohol to complete saturation.
       </p>
 
       <p>
@@ -805,45 +805,84 @@ import Layout from "../../../layouts/Layout.astro";
 
         <!-- YELLOW FEVER -->
 
-        <section>
-          <p class="section-date">1878</p>
+<section>
+  <p class="section-date">1878</p>
 
-          <h2>Yellow Fever in the American South</h2>
+  <h2>Yellow Fever in the American South</h2>
 
-          <p>
-            The yellow fever epidemic of 1878 devastated communities across
-            the Mississippi Valley and American South.
-          </p>
+  <p>
+    The yellow fever epidemic of 1878 devastated communities across
+    the Mississippi Valley and American South.
+  </p>
 
-          <p>
-            A report preserved in the
-            <em>Transactions of the Homoeopathic Medical Society of the State
-            of Pennsylvania</em> compiled figures from physicians practicing
-            homeopathy during the epidemic.
-          </p>
+  <p>
+    A report preserved in the
+    <em> Transactions of the Homoeopathic Medical Society of the State
+    of Pennsylvania</em> compiled figures from physicians practicing
+    homeopathy during the epidemic.
+  </p>
 
-          <p>
-            The report recorded:
-          </p>
+  <p>
+    For the epidemic of 1878, the report recorded:
+  </p>
 
-          <div class="stat-card">
-            <p class="stat-number">6,569</p>
-            <p class="stat-label">yellow fever cases</p>
+  <div class="yellow-fever-layout">
 
-            <div class="stat-divider"></div>
+    <div class="yellow-fever-copy">
 
-            <p class="stat-number secondary">360 deaths</p>
-            <p class="stat-label">approximately 5.5%</p>
-          </div>
+      <div class="stat-card">
+        <p class="stat-number">3,914</p>
+        <p class="stat-label">
+          reported yellow fever cases treated homeopathically
+        </p>
 
-          <p>
-            These are historical reports assembled by the profession itself,
-            not the product of a modern controlled study. But the scale of the
-            recorded experience is significant and belongs in the historical
-            record.
-          </p>
+        <div class="stat-divider"></div>
 
-        </section>
+        <p class="stat-number secondary">261 deaths</p>
+        <p class="stat-label">6.6% reported mortality</p>
+      </div>
+
+      <p>
+        The report also placed the 1878 experience within a broader
+        historical record. It included 555 cases with 33 deaths from
+        the epidemic of 1853 and another 2,100 cases with 66 deaths
+        from several smaller epidemics between 1853 and 1878.
+      </p>
+
+      <p>
+        Combining these reports, the authors gave a grand total of
+        6,569 cases treated by homeopathic physicians, with 360 deaths.
+      </p>
+
+    </div>
+
+    <figure class="historical-document yellow-fever-source">
+      <img
+        src="/images/history/yellow-fever-1878.jpg"
+        alt="Page 147 of the Transactions of the Homoeopathic Medical Society of the State of Pennsylvania reporting yellow fever statistics"
+        loading="lazy"
+      />
+
+      <figcaption>
+        <strong>
+          Yellow fever statistics reported by the Homoeopathic Medical
+          Society of the State of Pennsylvania.
+        </strong>{" "}
+        <em>Transactions of the Homoeopathic
+        Medical Society of the State of Pennsylvania</em>, p. 147.
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <p>
+    These are historical reports assembled by the profession itself,
+    not the product of a modern controlled study. But the scale of the
+    recorded experience is significant and belongs in the historical
+    record.
+  </p>
+
+</section>
 
 
         <!-- INFLUENZA -->
@@ -1585,16 +1624,6 @@ import Layout from "../../../layouts/Layout.astro";
               </span>
             </li>
 
-            <li>
-              <a
-                href="https://www.fiamo.it/pdf/Atti_Congresso_2016.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                FIAMO — historical documentation concerning Rocco Rubini and
-                the Third Swiss Regiment
-              </a>
-            </li>
 
             <li>
               <a
@@ -2423,6 +2452,27 @@ import Layout from "../../../layouts/Layout.astro";
 
 
   /* =========================================================
+   YELLOW FEVER
+========================================================== */
+
+.yellow-fever-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.yellow-fever-copy .stat-card {
+  margin-top: 0;
+}
+
+.yellow-fever-source {
+  margin: 0;
+}
+
+
+  /* =========================================================
      REFLECTION
   ========================================================== */
 
@@ -2647,6 +2697,16 @@ import Layout from "../../../layouts/Layout.astro";
   height: 1px;
   margin-inline: auto;
 }
+
+  .yellow-fever-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .yellow-fever-source {
+    width: min(100%, 430px);
+    margin-inline: auto;
+  }
 
 
 }
