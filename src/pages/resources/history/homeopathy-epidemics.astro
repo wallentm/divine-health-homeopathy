@@ -387,27 +387,148 @@ import Layout from "../../../layouts/Layout.astro";
       </p>
 
       <blockquote>
-        “It would not however be fair to take advantage of such a
-        combination, in estimating the relative success of the two
-        systems.”
-      </blockquote>
+  “It would not however be fair to take advantage of such a
+  combination, in estimating the relative success of the two
+  systems.”
+</blockquote>
 
-    </div>
+</div>
 
-    <figure class="historical-document joslin-document">
-      <img
-        src="/images/history/joslin-cincinnati-1849.jpg"
-        alt="Benjamin F. Joslin's 1854 account showing 1,116 cholera cases and 35 deaths in Cincinnati"
-        loading="lazy"
-      />
+<figure class="historical-document joslin-document">
+  <img
+    src="/images/history/joslin-cincinnati-1849.jpg"
+    alt="Benjamin F. Joslin's 1854 account showing 1,116 cholera cases and 35 deaths in Cincinnati"
+    loading="lazy"
+  />
 
-      <figcaption>
-          Benjamin F. Joslin's 1854 account of the Cincinnati cholera epidemic.
-        
-      </figcaption>
-    </figure>
+  <figcaption>
+    Benjamin F. Joslin's 1854 account of the Cincinnati cholera epidemic.
+  </figcaption>
+</figure>
+
+</div>
+
+
+<!-- CINCINNATI CONTEMPORARY SCRUTINY -->
+
+<div class="historical-callout cincinnati-scrutiny">
+
+  <h3 class="cincinnati-scrutiny-title">
+    Contemporary Cincinnati Scrutiny — 1849
+  </h3>
+
+  <p class="cincinnati-scrutiny-subtitle">
+    The Cincinnati Results Were Publicly Challenged
+  </p>
+
+  <p>
+    The unusually favorable results reported by Pulte and Ehrmann did not
+    go unchallenged. Shortly after their statistics were published,
+    physician and Methodist minister Samuel A. Latta disputed their
+    reporting and identified nine additional American deaths that he
+    believed should have been included.
+  </p>
+
+  <p>
+    Cincinnati's Homœopathic Association appointed a five-member citizens'
+    committee to investigate the disputed cases. Among its members was
+    Cincinnati attorney{" "}
+    <a
+      href="https://www.nps.gov/articles/like-father-like-son.htm"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <strong>Alphonso Taft</strong>
+    </a>,
+    who would later serve as United States Secretary of War and Attorney
+    General and was the father of future President William Howard Taft.
+  </p>
+
+  <p>
+    The committee investigated the nine cases individually, consulting
+    surviving relatives, friends and attending physicians. Its findings
+    challenged several of Latta's allegations. Among them, the committee
+    reported that one woman listed among the dead,{" "}
+    <strong>Mrs. Roberts, was alive and well</strong>; that another patient
+    had already died before Pulte was summoned; and that another death
+    occurred after the period covered by Pulte and Ehrmann's published
+    report.
+  </p>
+
+  <p>
+    Other cases were less clear-cut, involving disagreements over diagnosis,
+    previous treatment, the involvement of other physicians and whether a
+    patient seen only briefly or after collapse should be counted among
+    Pulte and Ehrmann's treatment outcomes. Latta rejected aspects of the
+    committee's findings and criticized the investigation as one-sided.
+  </p>
+
+  <p class="callout-conclusion">
+  <strong>
+    The inquiry was not an independent audit of all 1,116 reported cholera
+    cases and therefore cannot verify the entire Cincinnati treatment
+    series.
+  </strong>
+  {" "}It does, however, provide unusually valuable contemporary evidence
+  surrounding these remarkable results. When specific deaths were alleged
+  to have been omitted, the controversy did not simply end with competing
+  claims: a citizens' appointed committee investigated the disputed cases individually,
+  leaving a surviving record in which the published figures were publicly
+  challenged, examined and defended.
+</p>
+
+  <div class="callout-sources">
+
+    <p class="callout-sources-title">
+      <strong>Explore the historical record:</strong>
+    </p>
+
+    <p>
+  <a
+    href="https://books.google.com/books?id=MXECAAAAYAAJ"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Cincinnati Investigating Committee Report (1849)
+  </a>
+  — Contemporary report of the Cincinnati committee appointed to
+  investigate the controversy surrounding Pulte and Ehrmann's cholera
+  reporting, republished in the{" "}
+  <em>Quarterly Homœopathic Journal</em> <br>Vol. 2 (1850), pp. 131–143.
+</p>
+
+    <p>
+  <a
+    href="https://archive.org/details/choleraincincinn00latt"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Samuel A. Latta — <em>The Cholera in Cincinnati</em> (1850)
+  </a>
+  — Contemporary critique of Pulte and Ehrmann's cholera reporting and
+  rebuttal of the Cincinnati investigating committee's findings.
+  Cincinnati: Morgan & Overend, Printers, 1850, especially pp. 12–20.
+</p>
+
+    <p>
+  <a
+    href="https://archive.org/details/historyofhomoeop01king"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    William Harvey King —
+    <em>History of Homœopathy and Its Institutions in America</em> (1905)
+  </a>
+  — Later historical account of Cincinnati's 1849 “cholera pamphlet war,”
+  including the controversy surrounding Pulte and Ehrmann and the formation
+  and membership of the investigating committee. Vol. I, Chapter VIII,
+  “Homœopathy in Ohio,” especially pp. 171–173.
+</p>
 
   </div>
+
+</div>
+
 </section>
 
 
@@ -2185,6 +2306,128 @@ published <em> Homeopathy in Influenza—A Chorus of Fifty in Harmony</em> in th
 
 
   /* =========================================================
+   CINCINNATI — CONTEMPORARY SCRUTINY
+========================================================== */
+
+.cincinnati-scrutiny {
+  width: 100%;
+  max-width: none;
+
+  margin: 3.5rem 0;
+  padding: 2.75rem 3rem;
+
+  background: #173a6a;
+
+  border: 1px solid rgba(184, 147, 59, 0.7);
+  border-radius: 18px;
+
+  box-shadow: 0 12px 30px rgba(23, 58, 106, 0.12);
+
+  color: #fffdf8;
+}
+
+
+/* CALLOUT TITLE */
+
+.cincinnati-scrutiny-title {
+  margin: 0 0 0.35rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.75rem, 2.6vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.1;
+
+  color: #fffdf8;
+}
+
+
+/* CALLOUT SUBTITLE */
+
+.cincinnati-scrutiny-subtitle {
+  margin: 0 0 2rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  color: #d8bd79;
+}
+
+
+/* BODY TEXT */
+
+.cincinnati-scrutiny p {
+  max-width: none;
+  color: #f7f2e8;
+}
+
+.cincinnati-scrutiny strong {
+  color: #ffffff;
+}
+
+
+/* LINKS */
+
+.cincinnati-scrutiny a {
+  color: #e2c77f;
+  text-decoration-color: rgba(226, 199, 127, 0.65);
+  text-underline-offset: 3px;
+}
+
+/* Allows bold text inside links — such as Alphonso Taft —
+   to inherit the gold link color instead of turning white */
+
+.cincinnati-scrutiny a strong {
+  color: inherit;
+}
+
+.cincinnati-scrutiny a:hover {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+}
+
+
+/* CONCLUSION WITHIN CALLOUT */
+
+.cincinnati-scrutiny .callout-conclusion {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+
+  border-left: 3px solid #b8933b;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+
+/* SOURCES WITHIN CALLOUT */
+
+.cincinnati-scrutiny .callout-sources {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(184, 147, 59, 0.55);
+}
+
+.cincinnati-scrutiny .callout-sources-title {
+  margin-bottom: 1rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: #e2c77f;
+}
+
+.cincinnati-scrutiny .callout-sources p {
+  max-width: none;
+
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+  
+  /* =========================================================
    ROUTH
 ========================================================== */
 
@@ -2652,6 +2895,19 @@ published <em> Homeopathy in Influenza—A Chorus of Fifty in Harmony</em> in th
 }
 
 
+.cincinnati-scrutiny {
+  padding: 2.25rem 2rem;
+}
+
+.cincinnati-scrutiny-title {
+  font-size: 2.4rem;
+}
+
+.cincinnati-scrutiny-subtitle {
+  font-size: 1.3rem;
+}
+
+
 .routh-layout {
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -2782,6 +3038,34 @@ published <em> Homeopathy in Influenza—A Chorus of Fifty in Harmony</em> in th
   font-size: 2.15rem;
   white-space: normal;
   }
+
+
+  .cincinnati-scrutiny {
+  margin: 2.5rem 0;
+  padding: 1.75rem 1.35rem;
+
+  border-radius: 14px;
+}
+
+.cincinnati-scrutiny-title {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.cincinnati-scrutiny-subtitle {
+  margin-bottom: 1.5rem;
+
+  font-size: 1.2rem;
+}
+
+.cincinnati-scrutiny .callout-conclusion {
+  padding: 1rem 1.1rem;
+}
+
+.cincinnati-scrutiny .callout-sources {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+}
 
 
   }
