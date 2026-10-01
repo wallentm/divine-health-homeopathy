@@ -1,5 +1,5 @@
 ---
-const story = {
+const stories = [{
   title: "Mother Teresa",
   description:
     "Historical records document connections between Mother Teresa’s charitable work in India and homeopathy, including a homeopathic dispensary in Kidderpore and support for a homeopathic hospital in Kolkata.",
@@ -7,7 +7,16 @@ const story = {
   imageAlt:
   "Mother Teresa Homeopathy in History header featuring her portrait and the title An Unexpected Connection to Homeopathy",
   href: "/resources/history/mother-teresa",
-};
+}, {
+  title: "Washington Irving",
+  description:
+    "Explore the author of The Legend of Sleepy Hollow through his own letters about homeopathy and the medical account of his physician, Dr. John C. Peters.",
+  image: "/images/history/washington-irving-infographic.png",
+  imageAlt:
+    "Washington Irving Homeopathy in History infographic featuring his portrait, excerpts from his letters, and his physician’s account",
+  // Confirm this matches the route of your Irving article.
+  href: "/resources/history/washington-irving",
+}];
 ---
 
 <section class="history-section" id="homeopathy-in-history">
@@ -20,10 +29,12 @@ const story = {
 
       <p class="history-intro">
         Discover the people, places, and events woven throughout more than
-        two centuries of homeopathic history.
+        two centuries of homeopathy history.
       </p>
     </header>
 
+    <div class="history-grid">
+      {stories.map((story) => (
     <article class="featured-story">
 
       <a
@@ -55,7 +66,7 @@ const story = {
           {story.description}
         </p>
 
-        <a href={story.href} class="story-link">
+        <a href={story.href} class="story-link" aria-label={`Explore the story of ${story.title}`}>
           Explore the Story
           <span aria-hidden="true">→</span>
         </a>
@@ -63,6 +74,8 @@ const story = {
       </div>
 
     </article>
+      ))}
+    </div>
 
   </div>
 </section>
@@ -110,11 +123,19 @@ const story = {
     color: #383838;
   }
 
-  .featured-story {
-  display: block;
+  .history-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem;
+    align-items: stretch;
+  }
 
-  width: min(520px, 100%);
-  margin: 0 auto;
+  .featured-story {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
 
   overflow: hidden;
 
@@ -141,6 +162,7 @@ const story = {
   .featured-image-link {
   display: block;
   width: 100%;
+  flex-shrink: 0;
   padding: 0;
   text-decoration: none;
 }
@@ -157,19 +179,16 @@ const story = {
   width: 100%;
   height: auto;
 
-  transition: transform 0.3s ease;
-}
-
-.featured-story:hover .featured-image {
-  transform: scale(1.01);
+  /* Preserve all text and artwork in both source images. */
 }
 
   .featured-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 
-  padding: 1.65rem 2rem 2rem;
+  padding: 1.5rem 1.25rem 1.75rem;
 
   text-align: center;
 }
@@ -189,7 +208,7 @@ const story = {
   margin: 0;
 
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 2.35rem;
+  font-size: 2.1rem;
   font-weight: 500;
   line-height: 1.05;
 
@@ -220,7 +239,7 @@ const story = {
 
   .history-description {
   max-width: 420px;
-  margin: 0.9rem auto 0;
+  margin: 0.9rem auto 1.25rem;
 
   font-size: 0.9rem;
   line-height: 1.6;
@@ -235,7 +254,7 @@ const story = {
 
   width: fit-content;
 
-  margin-top: 1.25rem;
+  margin-top: auto;
   padding: 0.7rem 1.2rem;
 
   border: 1px solid #173a6a;
@@ -269,8 +288,8 @@ const story = {
   }
 
   @media (max-width: 900px) {
-  .featured-story {
-    width: min(520px, 100%);
+  .history-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .featured-content {
@@ -285,6 +304,12 @@ const story = {
 
   .history-heading {
     margin-bottom: 2.5rem;
+  }
+
+  .history-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 520px;
+    margin-inline: auto;
   }
 
   .featured-story {
@@ -309,4 +334,17 @@ const story = {
     line-height: 1.6;
   }
 }
+  .featured-story a:focus-visible {
+    outline: 3px solid #b8933b;
+    outline-offset: -3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .featured-story,
+    .story-link,
+    .story-link span {
+      transition: none;
+      transform: none;
+    }
+  }
 </style>
