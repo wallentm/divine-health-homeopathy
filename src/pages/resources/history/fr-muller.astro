@@ -1,4 +1,7 @@
 ---
+import Layout from "../../../layouts/Layout.astro";
+import HistorySeriesBanner from "../../../components/HistorySeriesBanner.astro";
+
 /* =========================================================
    DIVINE HEALTH HOMEOPATHY
    HOMEOPATHY IN HISTORY
@@ -17,8 +20,6 @@
    Do not deploy until the article and image permissions
    have been reviewed.
    ========================================================= */
-
-import Layout from "../../../layouts/Layout.astro";
 
 const pageTitle =
   "Father Augustus Müller, S.J. | Homeopathy in History";
@@ -82,45 +83,97 @@ const showNIHPlaceholders = true;
   <main class="history-page">
 
     <!-- =====================================================
-         HERO
-         ===================================================== -->
+     HERO — FATHER AUGUSTUS MÜLLER
+     ===================================================== -->
 
-    <section class="hero">
+<section class="hero">
 
-      <div class="hero-inner">
+  <div class="hero-inner">
 
-        <p class="eyebrow">
-          Divine Health Homeopathy
-          <span class="eyebrow-divider">•</span>
-          Homeopathy in History
+    <!-- LEFT COLUMN — INTRODUCTION -->
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        Homeopathy in History
+      </p>
+
+      <h1>
+        Father Augustus<br />
+        Müller, S.J.
+      </h1>
+
+      <p class="hero-dates">
+        1841–1910
+      </p>
+
+      <p class="hero-subtitle">
+        Jesuit Priest. Homeopath. Missionary.
+      </p>
+
+      <p class="hero-tagline">
+        From a Small Chest of Medicines
+        to a Lifetime of Charity.
+      </p>
+
+      <p class="hero-description">
+        Father Augustus Müller (1841–1910)
+        was a German-born Jesuit missionary
+        whose work in Mangalore, India,
+        began with a small homeopathic
+        dispensary and grew into a network
+        of charitable institutions dedicated
+        to caring for the sick and underserved.
+      </p>
+
+    </div>
+
+
+    <!-- RIGHT COLUMN — HISTORICAL PORTRAIT -->
+
+    <div class="hero-portrait">
+
+      <!--
+        Historical portrait placeholder.
+
+        Awaiting image reproduction permission
+        from the National Institute of Homoeopathy,
+        Kolkata.
+
+        Replace this placeholder with the
+        authenticated historical portrait
+        once permission is received.
+      -->
+
+      <div class="portrait-placeholder">
+
+        <span class="portrait-placeholder-symbol">
+          ✦
+        </span>
+
+        <p>
+          Historical Portrait
         </p>
 
-        <div class="hero-rule"></div>
-
-        <h1>
+        <span>
           Father Augustus Müller, S.J.
-        </h1>
-
-        <p class="hero-dates">
+          <br />
           1841–1910
-        </p>
-
-        <p class="hero-subtitle">
-          A Jesuit Missionary, Homeopathy,
-          and a Legacy of Charity in India
-        </p>
-
-        <div class="hero-quote">
-          <p>
-            From a small chest of medicines beneath
-            a banyan tree to a lifetime devoted
-            to the sick and forgotten.
-          </p>
-        </div>
+        </span>
 
       </div>
 
-    </section>
+      <p class="portrait-caption">
+        Father Augustus Müller, S.J.
+        Historical portrait pending
+        reproduction permission.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 
     <!-- =====================================================
@@ -140,10 +193,9 @@ const showNIHPlaceholders = true;
         </h2>
 
         <p class="lead">
-          In November 1910, the city of Mangalore,
-          India, mourned the death of a German-born
-          Jesuit priest whose charitable work had
-          become part of the community's life.
+          On November 1, 1910, the Feast of All Saints, the city of Mangalore, India, 
+          mourned the passing of a German-born Jesuit priest whose life of charitable 
+          service had become deeply woven into the fabric of the community.
         </p>
 
         <p>
@@ -234,115 +286,121 @@ const showNIHPlaceholders = true;
 
 
     <!-- =====================================================
-         EARLY LIFE
-         ===================================================== -->
+     EARLY LIFE — IMAGE LEFT
+     ===================================================== -->
 
-    <section class="article-section">
+<section class="article-section side-document-section">
 
-      <div class="article-inner">
+  <div class="side-layout two-column-left">
 
-        <p class="section-label">
-          1841–1861
-        </p>
+    <!-- HISTORICAL IMAGE -->
 
-        <h2>
-          From Westphalia to the Society of Jesus
-        </h2>
+    <figure class="side-image side-left">
 
-        <p>
-          Father Müller was born
-          <strong>Friedrich August Müller</strong>
-          on March 13, 1841, in Westphalia,
-          Germany.
-        </p>
+      <a
+        href={images.baptism}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={images.baptism}
+          alt="1841 baptismal register containing the entry for Friedrich August Müller"
+          loading="lazy"
+        />
+      </a>
 
-        <p>
-          His baptismal record, preserved in
-          the parish registers of St. Marien
-          in Hagen, provides an important
-          connection to his earliest years.
-        </p>
+      <figcaption>
+        <strong>
+          The Baptism of Friedrich August Müller
+        </strong>
 
-        <p>
-          The entry records his baptism on
-          March 21, 1841, and identifies
-          his parents as
-          <strong>
-            Johann Müller and Catharina Kersting.
-          </strong>
-        </p>
+        <span>
+          St. Marien, Hagen, 1841.
+          Entry no. 33.
+          Archdiocesan Archives of Paderborn.
+        </span>
 
-        <figure class="document-figure">
+        <a
+          href={sources.baptism}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Original Register ↗
+        </a>
+      </figcaption>
 
-          <a
-            href={images.baptism}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={images.baptism}
-              alt="1841 baptismal register containing the entry for Friedrich August Müller"
-              loading="lazy"
-            />
-          </a>
+    </figure>
 
-          <figcaption>
-            <strong>
-              The Baptism of Friedrich August Müller
-            </strong>
+    <!-- ARTICLE TEXT -->
 
-            <span>
-              St. Marien, Hagen, 1841.
-              Entry no. 33 records his birth
-              and baptism.
-              Archdiocesan Archives of Paderborn,
-              via Matricula Online.
-            </span>
+    <div class="reading-column">
 
-            <a
-              href={sources.baptism}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Original Register ↗
-            </a>
-          </figcaption>
+      <p class="section-label">
+        1841–1861
+      </p>
 
-        </figure>
+      <h2>
+        From Westphalia to the <br>Society of Jesus
+      </h2>
 
-        <p>
-          In 1861, at the age of twenty,
-          Müller traveled to New York and
-          entered the Society of Jesus
-          on September 24.
-        </p>
+      <p>
+        Father Müller was born{" "}
+        <strong>Friedrich August Müller{" "}</strong>
+        on March 13, 1841, in Westphalia,
+        Germany.
+      </p>
 
-        <p>
-          According to his obituary,
-          following his novitiate he spent
-          six years at St. John's College
-          in Fordham, New York, and another
-          year at St. Mary's College
-          in Montreal.
-        </p>
+      <p>
+        His baptismal record, preserved in
+        the parish registers of St. Marien
+        in Hagen, provides an important
+        connection to his earliest years.
+      </p>
 
-        <p>
-          He subsequently continued his
-          religious formation at Woodstock
-          College in Maryland, where he
-          studied philosophy and theology.
-        </p>
+      <p>
+        The entry records his baptism on
+        March 21, 1841, and identifies
+        his parents as{" "}
+        <strong>
+          Johann Müller and Catharina Kersting.
+        </strong>
+      </p>
 
-        <p>
-          It was during these years that
-          serious health difficulties
-          interrupted his studies and
-          changed the course of his life.
-        </p>
+      <p>
+        In 1861, at the age of twenty,
+        Müller traveled to New York and
+        entered the Society of Jesus
+        on September 24.
+      </p>
 
-      </div>
+      <p>
+        According to his obituary,
+        following his novitiate he spent
+        six years at St. John's College
+        in Fordham, New York, and another
+        year at St. Mary's College
+        in Montreal.
+      </p>
 
-    </section>
+      <p>
+        He subsequently continued his
+        religious formation at Woodstock
+        College in Maryland, where he
+        studied philosophy and theology.
+      </p>
+
+      <p>
+        It was during these years that
+        serious health difficulties
+        interrupted his studies and
+        changed the course of his life.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 
     <!-- =====================================================
@@ -380,7 +438,7 @@ const showNIHPlaceholders = true;
           had already encountered homeopathy
           while living in America, having
           received treatment from
-          <strong>Dr. McManus of Baltimore.</strong>
+          <strong> Dr. McManus of Baltimore.</strong>
         </p>
 
         <p>
@@ -393,7 +451,7 @@ const showNIHPlaceholders = true;
 
         <p>
           He subsequently consulted
-          <strong>Dr. Espanet of Paris.</strong>
+          <strong> Dr. Espanet of Paris.</strong>
         </p>
 
         <p>
@@ -448,7 +506,7 @@ const showNIHPlaceholders = true;
          MANGALORE / BANYAN TREE
          ===================================================== -->
 
-    <section class="article-section">
+      <section class="article-section banyan-section">
 
       <div class="article-inner">
 
@@ -462,7 +520,7 @@ const showNIHPlaceholders = true;
 
         <p>
           On
-          <strong>December 31, 1878,</strong>
+          <strong> December 31, 1878, </strong>
           Father Augustus Müller arrived
           in Mangalore, India, as part of
           an early group of Jesuit missionaries
@@ -535,7 +593,7 @@ const showNIHPlaceholders = true;
         <p>
           In <strong>1880</strong>,
           the growing demand led to the
-          establishment of the
+          establishment of the{" "}
           <strong>
             Homoeopathic Poor Dispensary.
           </strong>
@@ -666,137 +724,183 @@ const showNIHPlaceholders = true;
     }
 
 
-    <!-- =====================================================
+        <!-- =====================================================
          LEPROSY HOSPITAL
+         HISTORICAL LETTER RIGHT — TEXT LEFT
          ===================================================== -->
 
-    <section class="article-section">
+    <section class="article-section side-document-section">
 
-      <div class="article-inner">
+      <div class="side-layout two-column-right">
 
-        <p class="section-label">
-          Compassion Without Boundaries
-        </p>
+        <!-- =================================================
+             ARTICLE TEXT — LEFT COLUMN
+             ================================================= -->
 
-        <h2>
-          St. Joseph's Leprosy Hospital
-        </h2>
+        <div class="reading-column">
 
-        <p>
-          During the nineteenth century,
-          people affected by leprosy,
-          now generally called Hansen's
-          disease, frequently experienced
-          profound social exclusion.
-        </p>
+          <p class="section-label">
+            Compassion Without Boundaries
+          </p>
 
-        <p>
-          Father Müller recognized the
-          need for a place where those
-          suffering from the disease
-          could receive shelter,
-          assistance, and compassionate care.
-        </p>
-
-        <p>
-          Around <strong>1890</strong>,
-          he established St. Joseph's
-          Leprosy Hospital in Mangalore.
-        </p>
-
-        <p>
-          The institution became one
-          of the defining works of
-          his missionary life.
-        </p>
-
-        <p>
-          Remarkably, we possess Father
-          Müller's own words describing
-          the challenges of sustaining
-          this undertaking.
-        </p>
-
-        <h3>
-          A Letter Written in 1891
-        </h3>
-
-        <p>
-          On November 6, 1891,
-          Father Müller wrote from
-          St. Joseph's Leper Asylum
-          to the editor of
-          <em>Woodstock Letters</em>,
-          appealing to his former Jesuit
-          companions for assistance.
-        </p>
-
-        <p>
-          He explained that he had
-          already sought public support
-          through newspapers in India
-          and England.
-        </p>
-
-        <p>
-          His appeal had appeared in
-          twenty-six English-language
-          newspapers in India and
-          four in England.
-        </p>
-
-        <p>
-          He hoped that Catholic and
-          Protestant newspapers in the
-          United States might also
-          publicize the asylum's needs.
-        </p>
-
-        <div class="primary-quote">
-
-          <span class="quote-mark">“</span>
-
-          <blockquote>
-            I receive and actually have
-            in the asylum lepers of
-            all kinds and creeds.
-          </blockquote>
+          <h2>
+            St. Joseph's Leprosy Hospital
+          </h2>
 
           <p>
-            — Father Augustus Müller,
-            November 6, 1891
+            During the nineteenth century,
+            people affected by leprosy,
+            now generally called Hansen's
+            disease, frequently experienced
+            profound social exclusion.
+          </p>
+
+          <p>
+            Father Müller recognized the
+            need for a place where those
+            suffering from the disease
+            could receive shelter,
+            assistance, and compassionate care.
+          </p>
+
+          <p>
+            Around <strong>1890</strong>,
+            he established St. Joseph's
+            Leprosy Hospital in Mangalore.
+          </p>
+
+          <p>
+            The institution became one
+            of the defining works of
+            his missionary life.
+          </p>
+
+          <p>
+            Remarkably, we possess Father
+            Müller's own words describing
+            the challenges of sustaining
+            this undertaking.
+          </p>
+
+          <h3>
+            A Letter Written in 1891
+          </h3>
+
+          <p>
+            On November 6, 1891,
+            Father Müller wrote from
+            St. Joseph's Leper Asylum
+            to the editor of
+            <em> Woodstock Letters </em>,
+            appealing to his former Jesuit
+            companions for assistance.
+          </p>
+
+          <p>
+            He explained that he had
+            already sought public support
+            through newspapers in India
+            and England.
+          </p>
+
+          <p>
+            His appeal had appeared in
+            twenty-six English-language
+            newspapers in India and
+            four in England.
+          </p>
+
+          <p>
+            He hoped that Catholic and
+            Protestant newspapers in the
+            United States might also
+            publicize the asylum's needs.
+          </p>
+
+          <!-- HISTORICAL QUOTATION -->
+
+          <div class="primary-quote">
+
+            <span class="quote-mark">“</span>
+
+            <blockquote>
+              I receive and actually have
+              in the asylum lepers of
+              all kinds and creeds.
+            </blockquote>
+
+            <p>
+              — Father Augustus Müller,
+              November 6, 1891
+            </p>
+
+          </div>
+
+          <p>
+            These words reveal an important
+            aspect of his missionary outlook.
+          </p>
+
+          <p>
+            Although he was a Catholic
+            priest working within the
+            Jesuit tradition, his charitable
+            assistance was not restricted
+            to Catholics.
+          </p>
+
+          <p>
+            The asylum welcomed people
+            of different religious backgrounds.
+          </p>
+
+          <p>
+            The letter also reveals the
+            financial difficulties he faced.
+          </p>
+
+          <p>
+            Müller sought donations to
+            purchase land and construct
+            additional buildings.
+          </p>
+
+          <p>
+            He believed that the assistance
+            of religious sisters would be
+            essential to the asylum's
+            continued development,
+            but lacked the necessary funds.
+          </p>
+
+          <p>
+            Rather than presenting an
+            idealized account of charitable
+            work, his correspondence
+            exposes its practical realities:
+            limited resources, ambitious
+            plans, and a persistent
+            need for assistance.
           </p>
 
         </div>
 
-        <p>
-          These words reveal an important
-          aspect of his missionary outlook.
-        </p>
 
-        <p>
-          Although he was a Catholic
-          priest working within the
-          Jesuit tradition, his charitable
-          assistance was not restricted
-          to Catholics.
-        </p>
+        <!-- =================================================
+             HISTORICAL DOCUMENT — RIGHT COLUMN
+             ================================================= -->
 
-        <p>
-          The asylum welcomed people
-          of different religious backgrounds.
-        </p>
-
-        <figure class="document-figure">
+        <figure class="side-image side-right letter-scan">
 
           <a
             href={images.letter}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View Father Müller's 1891 letter"
           >
             <img
               src={images.letter}
-              alt="Father Augustus Müller's November 6, 1891 letter concerning St. Joseph's Leper Asylum"
+              alt="Opening page of Father Augustus Müller's November 6, 1891 letter titled The Lepers of Mangalore"
               loading="lazy"
             />
           </a>
@@ -809,9 +913,12 @@ const showNIHPlaceholders = true;
 
             <span>
               Letter written by Father
-              Müller on November 6, 1891,
-              and published in
-              Woodstock Letters,
+              Augustus Müller on
+              November 6, 1891,
+              from St. Joseph's Leper Asylum,
+              Mangalore.
+              Published in
+              <em> Woodstock Letters</em>,
               February 1892.
             </span>
 
@@ -826,35 +933,6 @@ const showNIHPlaceholders = true;
           </figcaption>
 
         </figure>
-
-        <p>
-          The letter also reveals the
-          financial difficulties he faced.
-        </p>
-
-        <p>
-          Müller sought donations to
-          purchase land and construct
-          additional buildings.
-        </p>
-
-        <p>
-          He believed that the assistance
-          of religious sisters would be
-          essential to the asylum's
-          continued development,
-          but lacked the necessary funds.
-        </p>
-
-        <p>
-          Rather than presenting an
-          idealized account of charitable
-          work, his correspondence
-          exposes its practical realities:
-          limited resources, ambitious
-          plans, and a persistent
-          need for assistance.
-        </p>
 
       </div>
 
@@ -947,14 +1025,14 @@ const showNIHPlaceholders = true;
           According to a contemporary
           report published in the
           December 1905 issue of
-          <em>Woodstock Letters</em>,
+          <em> Woodstock Letters </em>,{" "}
           <strong>
             Pope St. Pius X expressed
             admiration for Father Müller's
             charitable undertakings
             and extended his apostolic blessing
           </strong>
-          to Father Müller,
+          {" "}to Father Müller,
           Dr. L. P. Fernandes,
           their assistants, benefactors,
           and patients.
@@ -993,82 +1071,30 @@ const showNIHPlaceholders = true;
     </section>
 
 
-    <!-- =====================================================
+        <!-- =====================================================
          HAHNEMANN CONNECTION
+         HISTORICAL DOCUMENT LEFT — TEXT RIGHT
          ===================================================== -->
 
-    <section class="article-section">
+    <section class="article-section side-document-section">
 
-      <div class="article-inner">
+      <div class="side-layout two-column-left">
 
-        <p class="section-label">
-          An Unresolved Historical Question
-        </p>
+        <!-- =================================================
+             HISTORICAL DOCUMENT — LEFT COLUMN
+             ================================================= -->
 
-        <h2>
-          A Possible Family Connection to Samuel Hahnemann
-        </h2>
-
-        <p>
-          Among the more unusual details
-          preserved in the history of
-          Father Müller's institutions
-          is a possible family connection
-          to
-          <strong>
-            Samuel Hahnemann (1755–1843),
-          </strong>
-          the founder of homeopathy.
-        </p>
-
-        <p>
-          The account appears in
-          <em>
-            Guide to Health Through Homoeopathy,
-          </em>
-          published by Father Muller's
-          Charitable Institutions.
-        </p>
-
-        <p>
-          Under the heading
-          <em>
-            The Founder and the Institutions,
-          </em>
-          the publication states:
-        </p>
-
-        <div class="primary-quote">
-
-          <span class="quote-mark">“</span>
-
-          <blockquote>
-            It is a very striking and strange
-            coincidence that a grand-parent
-            of his, one Augustine Muller,
-            happened to be the teacher of
-            Master Samuel Hahnemann,
-            Founder of Homoeopathy,
-            in school.
-          </blockquote>
-
-          <p>
-            — Guide to Health Through Homoeopathy,
-            p. vii
-          </p>
-
-        </div>
-
-        <figure class="document-figure">
+        <figure class="side-image side-left wide-scan">
 
           <a
             href={images.hahnemann}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View historical publication discussing Father Müller's possible family connection to Samuel Hahnemann"
           >
             <img
               src={images.hahnemann}
-              alt="Institutional history describing a possible family connection between Father Müller and Samuel Hahnemann's teacher"
+              alt="Page from Guide to Health Through Homoeopathy describing a possible ancestral connection between Father Augustus Müller and Samuel Hahnemann's teacher"
               loading="lazy"
             />
           </a>
@@ -1080,12 +1106,11 @@ const showNIHPlaceholders = true;
             </strong>
 
             <span>
-              Guide to Health Through
-              Homoeopathy, p. vii.
-              The publication preserves
-              a claim concerning an
-              ancestor of Father Müller
-              and Samuel Hahnemann.
+              <em>Guide to Health Through Homoeopathy</em>,
+              p. vii. The publication preserves
+              a claim concerning an ancestor
+              of Father Müller and
+              Samuel Hahnemann.
             </span>
 
             <a
@@ -1100,157 +1125,255 @@ const showNIHPlaceholders = true;
 
         </figure>
 
-        <p>
-          This statement raises a
-          fascinating historical question.
-        </p>
 
-        <p>
-          Hahnemann attended the
-          prestigious St. Afra school
-          in Meissen, Germany,
-          where one of his teachers was
-          <strong>
-            Johann August Müller (1731–1804).
-          </strong>
-        </p>
+        <!-- =================================================
+             ARTICLE TEXT — RIGHT COLUMN
+             ================================================= -->
 
-        <p>
-          Historical accounts of
-          Hahnemann's education
-          independently establish
-          the relationship between
-          the young student and
-          his teacher.
-        </p>
+        <div class="reading-column">
 
-        <p>
-          Could the “Augustine Muller”
-          mentioned in the institutional
-          history refer to
-          Johann August Müller?
-        </p>
+          <p class="section-label">
+            An Unresolved Historical Question
+          </p>
 
-        <p>
-          The similarity is intriguing.
-          However, an important distinction
-          must be made.
-        </p>
-
-        <div class="research-note">
-
-          <span class="research-label">
-            Historical Research Note
-          </span>
+          <h2>
+            A Possible Family Connection
+            to Samuel Hahnemann
+          </h2>
 
           <p>
-            The relationship between
-            Samuel Hahnemann and
-            Johann August Müller
-            is documented.
+            Among the more unusual details
+            preserved in the history of
+            Father Müller's institutions
+            is a possible family connection
+            to {" "}
+            <strong> 
+              Samuel Hahnemann (1755–1843), 
+            </strong>
+            {" "}the founder of homeopathy.
           </p>
 
           <p>
-            The genealogical relationship
-            between that teacher and
-            Father Augustus Müller
-            has not yet been established.
+            The account appears in{" "}
+            <em>
+              Guide to Health Through Homoeopathy,
+            </em>
+            {" "}published by Father Muller's
+            Charitable Institutions:
+          </p>
+
+
+          <!-- HISTORICAL QUOTATION -->
+
+          <div class="primary-quote">
+
+            <span class="quote-mark">“</span>
+
+            <blockquote>
+              It is a very striking and strange
+              coincidence that a grand-parent
+              of his, one Augustine Muller,
+              happened to be the teacher of
+              Master Samuel Hahnemann,
+              Founder of Homoeopathy,
+              in school.
+            </blockquote>
+
+            <p>
+              — <em>Guide to Health Through Homoeopathy</em>,
+              p. vii
+            </p>
+
+          </div>
+
+
+          <p>
+            This statement raises a
+            fascinating historical question.
+          </p>
+
+          <p>
+            Hahnemann attended the
+            prestigious St. Afra school
+            in Meissen, Germany,
+            where one of his teachers was{" "}
+            <strong>
+              Johann August Müller (1731–1804).
+            </strong>
+          </p>
+
+          <p>
+            Historical accounts of
+            Hahnemann's education
+            independently establish
+            the relationship between
+            the young student and
+            his teacher.
+          </p>
+
+          <p>
+            Could the “Augustine Muller”
+            mentioned in the institutional
+            history refer to
+            Johann August Müller?
+          </p>
+
+          <p>
+            The similarity is intriguing.
+            However, an important distinction
+            must be made.
+          </p>
+
+
+          <!-- HISTORICAL RESEARCH NOTE -->
+
+          <div class="research-note">
+
+            <span class="research-label">
+              Historical Research Note
+            </span>
+
+            <p>
+              The relationship between
+              Samuel Hahnemann and
+              Johann August Müller
+              is documented.
+            </p>
+
+            <p>
+              The genealogical relationship
+              between that teacher and
+              Father Augustus Müller
+              has not yet been established.
+            </p>
+
+          </div>
+
+
+          <p>
+            Research into Father Müller's
+            baptismal record has identified
+            his parents, but the intervening
+            generations necessary to
+            demonstrate a family connection
+            remain undocumented.
+          </p>
+
+          <p>
+            The institutional account
+            therefore preserves an
+            interesting family tradition
+            rather than a proven
+            genealogical relationship.
+          </p>
+
+          <p>
+            It is a question worthy
+            of further historical
+            investigation.
           </p>
 
         </div>
-
-        <p>
-          Research into Father Müller's
-          baptismal record has identified
-          his parents, but the intervening
-          generations necessary to
-          demonstrate a family connection
-          remain undocumented.
-        </p>
-
-        <p>
-          The institutional account
-          therefore preserves an
-          interesting family tradition
-          rather than a proven
-          genealogical relationship.
-        </p>
-
-        <p>
-          It is a question worthy
-          of further historical
-          investigation.
-        </p>
 
       </div>
 
     </section>
 
 
-    <!-- =====================================================
+        <!-- =====================================================
          DEATH AND OBITUARY
+         HISTORICAL OBITUARY RIGHT — TEXT LEFT
          ===================================================== -->
 
-    <section class="article-section section-parchment">
+    <section class="article-section section-parchment side-document-section">
 
-      <div class="article-inner">
+      <div class="side-layout two-column-right">
 
-        <p class="section-label">
-          November 1, 1910
-        </p>
+        <!-- =================================================
+             ARTICLE TEXT — LEFT COLUMN
+             ================================================= -->
 
-        <h2>
-          A Life Remembered
-        </h2>
+        <div class="reading-column">
 
-        <p>
-          Father Müller died in
-          Mangalore on
-          <strong>
-            November 1, 1910,
-          </strong>
-          at the age of sixty-nine.
-        </p>
+          <p class="section-label">
+            November 1, 1910
+          </p>
 
-        <p>
-          His obituary provides
-          a moving account of
-          his final days.
-        </p>
+          <h2>
+            A Life Remembered
+          </h2>
 
-        <p>
-          After returning from
-          Calcutta on October 27,
-          he reportedly expressed
-          a desire to die in the
-          place where he had spent
-          so many years serving others.
-        </p>
+          <p>
+            Father Müller died in
+            Mangalore on{" "}
+            <strong>
+              November 1, 1910,
+            </strong>
+            {" "}at the age of sixty-nine.
+          </p>
 
-        <p>
-          The obituary records his
-          wish to be buried among
-          those affected by leprosy,
-          whose suffering he had
-          devoted himself to alleviating.
-        </p>
+          <p>
+            His obituary provides
+            a moving account of
+            his final days.
+          </p>
 
-        <p>
-          The account captures the
-          attachment he had developed
-          to Mangalore and its people.
-        </p>
+          <p>
+            After returning from
+            Calcutta on October 27,
+            he reportedly expressed
+            a desire to die in the
+            place where he had spent
+            so many years serving others.
+          </p>
 
-        <figure class="document-figure">
+          <p>
+            The obituary records his
+            wish to be buried among
+            those affected by leprosy,
+            whose suffering he had
+            devoted himself to alleviating.
+          </p>
+
+          <p>
+            The account captures the
+            attachment he had developed
+            to Mangalore and its people.
+          </p>
+
+          <p>
+            The obituary also records
+            that Father Müller had
+            become a naturalized
+            citizen of the United States
+            during his earlier years.
+          </p>
+
+          <p>
+            His life had crossed
+            continents, but his
+            lasting legacy remained
+            in India.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             HISTORICAL DOCUMENT — RIGHT COLUMN
+             ================================================= -->
+
+        <figure class="side-image side-right">
 
           <a
             href={images.obituary}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View historical obituary of Father Augustus Müller"
           >
             <img
               src={images.obituary}
-              alt="Historical obituary of Father Augustus Müller describing his death in November 1910"
+              alt="Opening page of the historical obituary of Father Augustus Müller, describing his death on November 1, 1910"
               loading="lazy"
             />
           </a>
@@ -1279,21 +1402,6 @@ const showNIHPlaceholders = true;
           </figcaption>
 
         </figure>
-
-        <p>
-          The obituary also records
-          that Father Müller had
-          become a naturalized
-          citizen of the United States
-          during his earlier years.
-        </p>
-
-        <p>
-          His life had crossed
-          continents, but his
-          lasting legacy remained
-          in India.
-        </p>
 
       </div>
 
@@ -1703,41 +1811,11 @@ const showNIHPlaceholders = true;
     </section>
 
 
-    <!-- =====================================================
-         FOOTER NAVIGATION
+        <!-- =====================================================
+         HOMEOPATHY IN HISTORY — SERIES BANNER
          ===================================================== -->
 
-    <section class="article-footer">
-
-      <div class="article-footer-inner">
-
-        <span class="footer-ornament">
-          ✦
-        </span>
-
-        <p>
-          Divine Health Homeopathy
-        </p>
-
-        <h2>
-          Discover More Stories
-        </h2>
-
-        <p class="footer-description">
-          Explore the people, ideas,
-          and historical documents
-          that shaped the story
-          of homeopathy.
-        </p>
-
-        <a href="/resources">
-          Return to Resources
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </section>
+    <HistorySeriesBanner />
 
   </main>
 </Layout>
@@ -1867,11 +1945,11 @@ const showNIHPlaceholders = true;
    ========================================================= */
 
 .article-section {
-  padding: 90px 24px;
+  padding: 50px 24px;
 }
 
 .article-inner {
-  max-width: 790px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -2407,6 +2485,541 @@ const showNIHPlaceholders = true;
 
 
 /* =========================================================
+   ALTERNATING HISTORICAL DOCUMENT LAYOUT
+   ========================================================= */
+
+.history-page .side-layout {
+  width: min(1280px, calc(100% - 48px));
+  margin-inline: auto;
+
+  display: grid;
+  gap: 64px;
+
+  align-items: center;
+}
+
+/* IMAGE LEFT — TEXT RIGHT */
+
+.history-page .side-layout.two-column-left {
+  grid-template-columns:
+    minmax(280px, 420px)
+    minmax(0, 800px);
+
+  align-items: start;
+}
+
+.history-page .side-layout.two-column-left .side-image {
+  margin-top: 45px;
+}
+
+.history-page .two-column-left > .side-left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.history-page .two-column-left > .reading-column {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* TEXT LEFT — IMAGE RIGHT */
+
+.history-page .side-layout.two-column-right {
+  grid-template-columns:
+    minmax(0, 800px)
+    minmax(280px, 420px);
+
+  align-items: start;
+}
+
+.history-page .side-layout.two-column-right .side-image {
+  margin-top: 45px;
+}
+
+/* =========================================================
+   OBITUARY SECTION — DOCUMENT POSITION
+   ========================================================= */
+
+.history-page .section-parchment .side-image {
+  margin-top: 20px;
+}
+
+.history-page .two-column-right > .reading-column {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.history-page .two-column-right > .side-right {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* READING COLUMN */
+
+.history-page .side-layout .reading-column {
+  width: 100%;
+  min-width: 0;
+}
+
+/* DOCUMENT IMAGES */
+
+.history-page .side-image {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+}
+
+.history-page .side-image a {
+  display: block;
+}
+
+.history-page .side-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+
+  border: 1px solid rgba(23, 58, 106, 0.18);
+
+  box-shadow:
+    0 16px 38px rgba(35, 28, 19, 0.12);
+}
+
+/* =========================================================
+   OBITUARY IMAGE — REMOVE OUTER FRAME
+   ========================================================= */
+
+.history-page .section-parchment .side-image img {
+  border: none;
+  box-shadow: none;
+}
+
+.history-page .section-parchment .side-image a {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.history-page .side-image figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 14px 6px 0;
+
+  text-align: center;
+
+  font-family: "Source Serif Pro", Georgia, serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #777;
+}
+
+.history-page .side-image figcaption strong {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.history-page .side-image figcaption a {
+  display: inline;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* SECTION SPACING */
+
+.history-page .side-document-section {
+  padding: 95px 0;
+}
+
+
+/* =========================================================
+   FATHER MÜLLER — HERO LAYOUT
+   ========================================================= */
+
+.history-page .hero {
+  position: relative;
+  isolation: isolate;
+
+  background-color: #173a6a;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(12, 35, 65, 0.94) 0%,
+      rgba(15, 43, 77, 0.82) 45%,
+      rgba(15, 43, 77, 0.65) 100%
+    ),
+    url("/images/history/banyan-tree.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 85px 24px;
+}
+
+
+/* TWO-COLUMN STRUCTURE */
+
+.history-page .hero-inner {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(280px, 0.85fr);
+
+  gap: 80px;
+  align-items: center;
+}
+
+
+/* LEFT COLUMN */
+
+.history-page .hero-content {
+  min-width: 0;
+  text-align: left;
+}
+
+.history-page .hero-content .eyebrow {
+  color: #c5a052;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.history-page .hero-content h1 {
+  color: #fbf7ef;
+  font-size: clamp(54px, 6.3vw, 94px);
+  line-height: 0.98;
+  letter-spacing: -1.5px;
+  margin: 0 0 25px;
+}
+
+.history-page .hero-dates {
+  color: #d9b568;
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.history-page .hero-subtitle {
+  color: #e5b85b;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.history-page .hero-tagline {
+  color: #fbf7ef;
+  font-size: clamp(27px, 3vw, 40px);
+  font-style: italic;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+
+.history-page .hero-description {
+  color: #f1ede5;
+  font-size: 19px;
+  line-height: 1.75;
+  max-width: 650px;
+  margin: 0;
+}
+
+
+/* RIGHT COLUMN */
+
+.history-page .hero-portrait {
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+}
+
+.history-page .portrait-placeholder {
+  min-height: 500px;
+  padding: 35px;
+
+  border: 2px solid #b8933b;
+
+  background: rgba(10, 30, 55, 0.65);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.history-page .portrait-placeholder-symbol {
+  color: #b8933b;
+  font-size: 54px;
+  margin-bottom: 25px;
+}
+
+.history-page .portrait-placeholder p {
+  color: #fbf7ef;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.history-page .portrait-placeholder span:last-child {
+  color: #d6c6a4;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.history-page .portrait-caption {
+  color: #c7d0dc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+
+/* =========================================================
+   HERO — FIT WITHIN FIRST SCREEN
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+  .history-page .hero {
+    height: calc(100vh - 92px);
+    min-height: 650px;
+    padding: 30px 24px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .history-page .hero-inner {
+    align-items: center;
+    gap: 65px;
+  }
+
+  .history-page .hero-content h1 {
+    font-size: clamp(52px, 5.2vw, 78px);
+    margin-bottom: 16px;
+  }
+
+  .history-page .hero-dates {
+    margin-bottom: 15px;
+  }
+
+  .history-page .hero-subtitle {
+    margin-bottom: 15px;
+  }
+
+  .history-page .hero-tagline {
+    font-size: clamp(25px, 2.5vw, 34px);
+    margin-bottom: 18px;
+  }
+
+  .history-page .hero-description {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .history-page .portrait-placeholder {
+    min-height: 390px;
+  }
+
+}
+
+
+/* =====================================================
+   BANYAN TREE — HISTORICAL BOTANICAL ILLUSTRATION
+   ===================================================== */
+
+.banyan-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Tall botanical illustration along right edge */
+
+.banyan-section::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 55%;
+
+  background-image: url('/images/history/banyan-botanical.png');
+  background-repeat: no-repeat;
+
+  /* Stretch the illustration across the section's height */
+  background-size: 100% 100%;
+  background-position: right center;
+
+  opacity: 0.40;
+
+  pointer-events: none;
+  z-index: -1;
+
+  /* Soften the left edge and blend into the white page */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.25) 20%,
+    black 65%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.25) 20%,
+    black 65%
+  );
+}
+
+/* Keep text above the illustration */
+
+.banyan-section .article-inner {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .history-page .hero-inner {
+    gap: 40px;
+    grid-template-columns:
+      minmax(0, 1.2fr)
+      minmax(240px, 0.8fr);
+  }
+
+  .history-page .hero-content h1 {
+    font-size: clamp(46px, 6vw, 70px);
+  }
+
+  .history-page .portrait-placeholder {
+    min-height: 400px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .history-page .hero {
+    padding: 60px 22px;
+    background-position: 60% center;
+  }
+
+  .history-page .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .history-page .hero-content h1 {
+    font-size: clamp(43px, 10vw, 65px);
+  }
+
+  .history-page .hero-description {
+    font-size: 17px;
+  }
+
+  .history-page .hero-portrait {
+    max-width: 350px;
+  }
+
+  .history-page .portrait-placeholder {
+    min-height: 380px;
+  }
+
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+  .history-page .side-layout {
+    width: calc(100% - 48px);
+    gap: 35px;
+  }
+
+  .history-page .side-layout.two-column-left {
+    grid-template-columns:
+      minmax(220px, 36%)
+      minmax(0, 1fr);
+  }
+
+  .history-page .side-layout.two-column-right {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(220px, 36%);
+  }
+
+  .history-page .side-image img {
+    max-height: 520px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .history-page .side-document-section {
+    padding: 65px 0;
+  }
+
+  .history-page .side-layout,
+  .history-page .side-layout.two-column-left,
+  .history-page .side-layout.two-column-right {
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100% - 44px);
+    gap: 30px;
+  }
+
+  .history-page .side-layout .reading-column {
+    order: 1;
+  }
+
+  .history-page .side-layout .side-image {
+    order: 2;
+    width: 100%;
+    max-width: 440px;
+    align-self: center;
+  }
+
+  .history-page .side-image img {
+    max-height: 540px;
+  }
+
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
@@ -2526,6 +3139,12 @@ const showNIHPlaceholders = true;
 
   .article-footer h2 {
     font-size: 39px;
+  }
+
+  .banyan-section::before {
+    width: 90%;
+    opacity: 0.12;
+    background-size: 100% 100%;
   }
 
 }
