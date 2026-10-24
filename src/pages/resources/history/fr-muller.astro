@@ -1,3 +1,4 @@
+
 ---
 import Layout from "../../../layouts/Layout.astro";
 import HistorySeriesBanner from "../../../components/HistorySeriesBanner.astro";
@@ -8,7 +9,7 @@ import HistorySeriesBanner from "../../../components/HistorySeriesBanner.astro";
 
    Father Augustus Müller, S.J. (1841–1910)
 
-   DRAFT — NOT YET APPROVED FOR PUBLICATION
+   DR`AFT — NOT YET APPROVED FOR PUBLICATION
 
    File:
    src/pages/resources/history/fr-muller.astro
@@ -17,8 +18,10 @@ import HistorySeriesBanner from "../../../components/HistorySeriesBanner.astro";
    public/images/history/
 
    IMPORTANT:
-   Do not deploy until the article and image permissions
-   have been reviewed.
+   AI-generated illustrations are artistic interpretations,
+   not authenticated historical photographs.
+
+   Review the complete article before publication.
    ========================================================= */
 
 const pageTitle =
@@ -27,7 +30,22 @@ const pageTitle =
 const pageDescription =
   "The remarkable history of Father Augustus Müller, a German Jesuit missionary whose work in homeopathy and charitable healthcare began in nineteenth-century Mangalore, India.";
 
+/* =========================================================
+   IMAGE REFERENCES
+   ========================================================= */
+
 const images = {
+
+  // AI-generated historical interpretations
+
+  banyanRendition:
+    "/images/history/rendition-fr-muller-banyan.png",
+
+  dispensaryRendition:
+    "/images/history/rendition-hp-dispensery.png",
+
+  // Historical primary-source documents
+
   baptism:
     "/images/history/muller-baptism-line-33.jpg",
 
@@ -41,7 +59,12 @@ const images = {
     "/images/history/hahnemann-grandfather-guide-health-fmci.jpg",
 };
 
+/* =========================================================
+   HISTORICAL SOURCES
+   ========================================================= */
+
 const sources = {
+
   baptism:
     "https://data.matricula-online.eu/de/deutschland/paderborn/DE_EBAP_42311/KB005-02-T/?pg=63",
 
@@ -54,8 +77,8 @@ const sources = {
   guide:
     "https://archive.org/details/guidetohealthoff0000augu/page/n1/mode/2up",
 
-  fmci2017:
-    "https://www.fathermuller.edu.in/medical-college/img/pdf/publications/fr-muller-mag-2017.pdf",
+fmci2017:
+  "https://www.fathermuller.edu.in/medical-college/img/pdf/publications/fr-muller-mag-2017.pdf#page=6",
 
   woodstock1905:
     "https://web.bc.edu/jsdc/jsl/wlet_19051201.pdf",
@@ -65,115 +88,108 @@ const sources = {
 
   diocese:
     "https://dioceseofmangalore.com/st-joseph-leprosy-hospital-turns-125-celebration-on-april-11-2015/",
+
+  dispensaryDocumentary:
+    "https://www.youtube.com/watch?v=2xUObb09gw8&t=662s",
 };
 
-/*
-  Set to false to remove every NIH photograph placeholder.
+/* =========================================================
+   NIH HISTORICAL PHOTOGRAPH PLACEHOLDERS
 
-  These are placeholder panels only.
-  No NIH photographs are loaded without permission.
-*/
-const showNIHPlaceholders = true;
+   Disabled while archival image permissions
+   remain unresolved.
+
+   Original historical documents elsewhere
+   in the article remain unchanged.
+   ========================================================= */
+
+const showNIHPlaceholders = false;
+
 ---
 
 <Layout
   title={pageTitle}
   description={pageDescription}
 >
+
   <main class="history-page">
 
     <!-- =====================================================
-     HERO — FATHER AUGUSTUS MÜLLER
-     ===================================================== -->
+         HERO — FATHER AUGUSTUS MÜLLER
+         ===================================================== -->
 
-<section class="hero">
+    <section class="hero">
 
-  <div class="hero-inner">
+      <div class="hero-inner">
 
-    <!-- LEFT COLUMN — INTRODUCTION -->
+        <!-- LEFT COLUMN — INTRODUCTION -->
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-      <p class="eyebrow">
-        Homeopathy in History
-      </p>
+          <p class="eyebrow">
+            Homeopathy in History
+          </p>
 
-      <h1>
-        Father Augustus<br />
-        Müller, S.J.
-      </h1>
+          <h1>
+            Father Augustus<br />
+            Müller, S.J.
+          </h1>
 
-      <p class="hero-dates">
-        1841–1910
-      </p>
+          <p class="hero-dates">
+            1841–1910
+          </p>
 
-      <p class="hero-subtitle">
-        Jesuit Priest. Homeopath. Missionary.
-      </p>
+          <p class="hero-subtitle">
+            Jesuit Priest. Homeopath. Missionary.
+          </p>
 
-      <p class="hero-tagline">
-        From a Small Chest of Medicines
-        to a Lifetime of Charity.
-      </p>
+          <p class="hero-tagline">
+            From a Small Chest of Medicines
+            to a <br>Lifetime of Charity.
+          </p>
 
-      <p class="hero-description">
-        Father Augustus Müller (1841–1910)
-        was a German-born Jesuit missionary
-        whose work in Mangalore, India,
-        began with a small homeopathic
-        dispensary and grew into a network
-        of charitable institutions dedicated
-        to caring for the sick and underserved.
-      </p>
-
-    </div>
+         
+        </div>
 
 
-    <!-- RIGHT COLUMN — HISTORICAL PORTRAIT -->
+        <!-- =================================================
+             RIGHT COLUMN — ARTISTIC INTERPRETATION
 
-    <div class="hero-portrait">
+             Divine Health Homeopathy original generated illustration.
 
-      <!--
-        Historical portrait placeholder.
+             The figure is inspired by Father Müller's
+             historical charitable work in Mangalore.
 
-        Awaiting image reproduction permission
-        from the National Institute of Homoeopathy,
-        Kolkata.
+             It is not an authenticated likeness.
+             ================================================= -->
 
-        Replace this placeholder with the
-        authenticated historical portrait
-        once permission is received.
-      -->
+        <div class="hero-portrait">
 
-      <div class="portrait-placeholder">
+          <figure class="hero-illustration">
 
-        <span class="portrait-placeholder-symbol">
-          ✦
-        </span>
+            <img
+              src={images.banyanRendition}
+              alt="AI-generated artistic interpretation of a nineteenth-century Jesuit missionary in a black cassock, seated at a simple wooden desk beneath a banyan tree, with an open book and a leather case of homeopathic medicines nearby."
+              loading="eager"
+              decoding="async"
+            />
 
-        <p>
-          Historical Portrait
-        </p>
+            <figcaption class="portrait-caption">
+              Artistic interpretation inspired by
+              accounts of Father Augustus Müller's
+              early charitable work in Mangalore.
+              Divine Health Homeopathy generated illustration;
+              not an authenticated likeness.
+            </figcaption>
 
-        <span>
-          Father Augustus Müller, S.J.
-          <br />
-          1841–1910
-        </span>
+          </figure>
+
+        </div>
 
       </div>
 
-      <p class="portrait-caption">
-        Father Augustus Müller, S.J.
-        Historical portrait pending
-        reproduction permission.
-      </p>
+    </section>
 
-    </div>
-
-  </div>
-
-</section>
 
 
     <!-- =====================================================
@@ -609,74 +625,106 @@ const showNIHPlaceholders = true;
 
     </section>
 
+    
+<!-- =====================================================
+     FAITH / VOCATION
+     ===================================================== -->
 
-    <!-- =====================================================
-         FAITH / VOCATION
-         ===================================================== -->
+<section class="faith-section">
 
-    <section class="faith-section">
+  <div class="faith-inner">
 
-      <div class="faith-inner">
+    <p class="section-label">
+      Faith in Action
+    </p>
 
-        <p class="section-label">
-          Faith in Action
-        </p>
+    <h2>
+      A Calling to Serve
+    </h2>
 
-        <h2>
-          A Calling to Serve
-        </h2>
+    <p class="faith-intro">
+      Father Müller's religious vocation
+      and his desire to care for the
+      suffering became deeply intertwined.
+    </p>
 
-        <p class="faith-intro">
-          Father Müller's religious vocation
-          and his desire to care for the
-          suffering became deeply intertwined.
-        </p>
+    <blockquote>
 
-        <blockquote>
+      <p>
+        “Believing that he had been
+        chosen by God to use Homeopathy
+        to care for the sick,
+        Fr Muller started his mission.”
+      </p>
 
-          <p>
-            “Believing that he had been
-            chosen by God to use Homeopathy
-            to care for the sick,
-            Fr Muller started his mission.”
-          </p>
+      <cite>
+        Father Muller Charitable Institutions
+        <span>2017 institutional publication</span>
+      </cite>
 
-          <cite>
-            Father Muller Charitable Institutions
-            <span>2017 institutional publication</span>
-          </cite>
+    </blockquote>
 
-        </blockquote>
+    <p>
+      These words, written by the
+      institution rather than Father
+      Müller himself, preserve how
+      his successors understood the
+      spiritual motivation behind
+      his work.
+    </p>
 
-        <p>
-          These words, written by the
-          institution rather than Father
-          Müller himself, preserve how
-          his successors understood the
-          spiritual motivation behind
-          his work.
-        </p>
+    <p>
+      His vocation as a Jesuit priest
+      and his desire to care for the
+      suffering were not separate
+      pursuits. They became two
+      expressions of the same calling.
+    </p>
 
-        <p>
-          His vocation as a Jesuit priest
-          and his desire to care for the
-          suffering were not separate
-          pursuits. They became two
-          expressions of the same calling.
-        </p>
 
-        <a
-          class="faith-source"
-          href={sources.fmci2017}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read the 2017 Institutional Publication ↗
-        </a>
+    <!-- ===============================================
+         HOMOEOPATHIC POOR DISPENSARY
+         ARTISTIC INTERPRETATION
+         =============================================== -->
 
-      </div>
+    <figure class="faith-dispensary">
 
-    </section>
+      <img
+        src={images.dispensaryRendition}
+        alt="Artistic interpretation of a nineteenth-century homeopathic dispensary in Mangalore, with open shuttered windows and Indian women, men, and children visiting the building."
+        loading="lazy"
+        decoding="async"
+      />
+
+      <figcaption>
+        <strong>
+          The Homoeopathic Poor Dispensary, Mangalore
+        </strong>
+
+        <span>
+          Divine Health Homeopathy generated artistic interpretation inspired by
+          historical imagery of the dispensary and accounts
+          of Father Augustus Müller's charitable work.
+          Not an authenticated historical photograph.
+        </span>
+      </figcaption>
+
+    </figure>
+
+
+    <a
+      class="faith-source"
+      href={sources.fmci2017}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Read the 2017 Institutional Publication ↗
+    </a>
+
+  </div>
+
+</section>
+
 
 
     <!-- =====================================================
@@ -749,9 +797,7 @@ const showNIHPlaceholders = true;
 
           <p>
             During the nineteenth century,
-            people affected by leprosy,
-            now generally called Hansen's
-            disease, frequently experienced
+            people affected by leprosy frequently experienced
             profound social exclusion.
           </p>
 
@@ -776,10 +822,9 @@ const showNIHPlaceholders = true;
           </p>
 
           <p>
-            Remarkably, we possess Father
-            Müller's own words describing
-            the challenges of sustaining
-            this undertaking.
+            Father Müller’s surviving correspondence provides 
+            a rare firsthand glimpse into the challenges of sustaining his 
+            charitable mission.
           </p>
 
           <h3>
@@ -800,143 +845,117 @@ const showNIHPlaceholders = true;
             He explained that he had
             already sought public support
             through newspapers in India
-            and England.
-          </p>
-
-          <p>
-            His appeal had appeared in
+            and England. His appeal had appeared in
             twenty-six English-language
             newspapers in India and
-            four in England.
-          </p>
-
-          <p>
-            He hoped that Catholic and
+            four in England. He hoped that Catholic and
             Protestant newspapers in the
             United States might also
             publicize the asylum's needs.
           </p>
 
-          <!-- HISTORICAL QUOTATION -->
-
-          <div class="primary-quote">
-
-            <span class="quote-mark">“</span>
-
-            <blockquote>
-              I receive and actually have
-              in the asylum lepers of
-              all kinds and creeds.
-            </blockquote>
-
-            <p>
-              — Father Augustus Müller,
-              November 6, 1891
-            </p>
-
-          </div>
-
-          <p>
-            These words reveal an important
-            aspect of his missionary outlook.
-          </p>
-
-          <p>
-            Although he was a Catholic
-            priest working within the
-            Jesuit tradition, his charitable
-            assistance was not restricted
-            to Catholics.
-          </p>
-
-          <p>
-            The asylum welcomed people
-            of different religious backgrounds.
-          </p>
-
-          <p>
-            The letter also reveals the
-            financial difficulties he faced.
-          </p>
-
-          <p>
-            Müller sought donations to
-            purchase land and construct
-            additional buildings.
-          </p>
-
-          <p>
-            He believed that the assistance
-            of religious sisters would be
-            essential to the asylum's
-            continued development,
-            but lacked the necessary funds.
-          </p>
-
-          <p>
-            Rather than presenting an
-            idealized account of charitable
-            work, his correspondence
-            exposes its practical realities:
-            limited resources, ambitious
-            plans, and a persistent
-            need for assistance.
-          </p>
-
         </div>
 
 
-        <!-- =================================================
-             HISTORICAL DOCUMENT — RIGHT COLUMN
-             ================================================= -->
+        
+<!-- =================================================
+     HISTORICAL DOCUMENT — RIGHT COLUMN
+     ================================================= -->
 
-        <figure class="side-image side-right letter-scan">
+<figure class="side-image side-right letter-scan">
 
-          <a
-            href={images.letter}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View Father Müller's 1891 letter"
-          >
-            <img
-              src={images.letter}
-              alt="Opening page of Father Augustus Müller's November 6, 1891 letter titled The Lepers of Mangalore"
-              loading="lazy"
-            />
-          </a>
+  <a
+    href={images.letter}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="View Father Müller's 1891 letter"
+  >
+    <img
+      src={images.letter}
+      alt="Opening page of Father Augustus Müller's November 6, 1891 letter titled The Lepers of Mangalore"
+      loading="lazy"
+    />
+  </a>
 
-          <figcaption>
+  <figcaption>
 
-            <strong>
-              The Lepers of Mangalore
-            </strong>
+    <strong>
+      The Lepers of Mangalore
+    </strong>
 
-            <span>
-              Letter written by Father
-              Augustus Müller on
-              November 6, 1891,
-              from St. Joseph's Leper Asylum,
-              Mangalore.
-              Published in
-              <em> Woodstock Letters</em>,
-              February 1892.
-            </span>
+    <span>
+      Letter written by Father
+      Augustus Müller on
+      November 6, 1891,
+      from St. Joseph's Leper Asylum,
+      Mangalore.
+      Published in
+      <em> Woodstock Letters</em>,
+      February 1892.
+    </span>
 
-            <a
-              href={sources.letter1891}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read Original Letter ↗
-            </a>
+    <a
+      href={sources.letter1891}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Read Original Letter ↗
+    </a>
 
-          </figcaption>
+  </figcaption>
 
-        </figure>
+</figure>
 
-      </div>
+<!-- CLOSE TWO-COLUMN LAYOUT -->
+</div>
 
-    </section>
+
+
+
+<!-- =====================================================
+     LEPROSY HOSPITAL — FULL-WIDTH CONTINUATION
+     ===================================================== -->
+
+<div class="leprosy-continuation">
+
+  <!-- HISTORICAL QUOTATION -->
+
+  <div class="primary-quote leprosy-quote">
+
+  <blockquote>
+    <span class="opening-quote">“</span>I receive and actually have
+    in the asylum lepers of
+    all kinds and creeds.<span class="closing-quote">”</span>
+  </blockquote>
+
+  <p>
+    — Father Augustus Müller,
+    November 6, 1891
+  </p>
+
+</div>
+
+
+  <!-- ARTICLE CONTINUATION -->
+
+  <p>
+    These words reveal an important aspect of his missionary outlook. The asylum welcomed people
+    of different religious backgrounds. Although he was a Catholic priest working within the Jesuit tradition,
+    his charitable assistance was not restricted to Catholics.
+  </p>
+
+  <p>
+    The letter also reveals the financial difficulties he faced. Müller sought donations to
+    purchase land and construct additional buildings. He believed that the assistance
+    of religious sisters would be essential to the asylum's continued development,
+    but lacked the necessary funds. Rather than presenting an idealized account of charitable
+    work, his correspondence exposes its practical realities: limited resources, ambitious
+    plans, and a persistent need for assistance.
+  </p>
+
+</div>
+
+</section>
 
 
     <!-- =====================================================
@@ -1126,158 +1145,146 @@ const showNIHPlaceholders = true;
         </figure>
 
 
-        <!-- =================================================
-             ARTICLE TEXT — RIGHT COLUMN
-             ================================================= -->
+        
+<!-- =================================================
+     ARTICLE TEXT — RIGHT COLUMN
+     ================================================= -->
 
-        <div class="reading-column">
+<div class="reading-column">
 
-          <p class="section-label">
-            An Unresolved Historical Question
-          </p>
+  <p class="section-label">
+    An Unresolved Historical Question
+  </p>
 
-          <h2>
-            A Possible Family Connection
-            to Samuel Hahnemann
-          </h2>
+  <h2>
+    A Possible Family Connection
+    to Samuel Hahnemann
+  </h2>
 
-          <p>
-            Among the more unusual details
-            preserved in the history of
-            Father Müller's institutions
-            is a possible family connection
-            to {" "}
-            <strong> 
-              Samuel Hahnemann (1755–1843), 
-            </strong>
-            {" "}the founder of homeopathy.
-          </p>
+  <p>
+    Among the more unusual details
+    preserved in the history of
+    Father Müller's institutions
+    is a possible family connection
+    to{" "}
+    <strong>
+      Samuel Hahnemann (1755–1843),
+    </strong>
+    {" "}the founder of homeopathy.
+  </p>
 
-          <p>
-            The account appears in{" "}
-            <em>
-              Guide to Health Through Homoeopathy,
-            </em>
-            {" "}published by Father Muller's
-            Charitable Institutions:
-          </p>
+  <p>
+    The account appears in{" "}
+    <em>
+      Guide to Health Through Homoeopathy,
+    </em>
+    {" "}published by Father Muller's
+    Charitable Institutions:
+  </p>
 
+  <!-- HISTORICAL QUOTATION -->
 
-          <!-- HISTORICAL QUOTATION -->
+  <div class="primary-quote">
 
-          <div class="primary-quote">
+    <span class="quote-mark">“</span>
 
-            <span class="quote-mark">“</span>
+    <blockquote>
+      It is a very striking and strange
+      coincidence that a grand-parent
+      of his, one Augustine Muller,
+      happened to be the teacher of
+      Master Samuel Hahnemann,
+      Founder of Homoeopathy,
+      in school.
+    </blockquote>
 
-            <blockquote>
-              It is a very striking and strange
-              coincidence that a grand-parent
-              of his, one Augustine Muller,
-              happened to be the teacher of
-              Master Samuel Hahnemann,
-              Founder of Homoeopathy,
-              in school.
-            </blockquote>
+    <p>
+      — <em>Guide to Health Through Homoeopathy</em>,
+      p. vii
+    </p>
 
-            <p>
-              — <em>Guide to Health Through Homoeopathy</em>,
-              p. vii
-            </p>
+  </div>
 
-          </div>
+</div>
 
+<!-- END OF TWO-COLUMN LAYOUT -->
 
-          <p>
-            This statement raises a
-            fascinating historical question.
-          </p>
-
-          <p>
-            Hahnemann attended the
-            prestigious St. Afra school
-            in Meissen, Germany,
-            where one of his teachers was{" "}
-            <strong>
-              Johann August Müller (1731–1804).
-            </strong>
-          </p>
-
-          <p>
-            Historical accounts of
-            Hahnemann's education
-            independently establish
-            the relationship between
-            the young student and
-            his teacher.
-          </p>
-
-          <p>
-            Could the “Augustine Muller”
-            mentioned in the institutional
-            history refer to
-            Johann August Müller?
-          </p>
-
-          <p>
-            The similarity is intriguing.
-            However, an important distinction
-            must be made.
-          </p>
+</div>
 
 
-          <!-- HISTORICAL RESEARCH NOTE -->
+<!-- =====================================================
+     FULL-WIDTH HISTORICAL RESEARCH CONTINUATION
+     ===================================================== -->
 
-          <div class="research-note">
+<div class="muller-research-continuation">
 
-            <span class="research-label">
-              Historical Research Note
-            </span>
+  <p>
+    This statement raises a
+    fascinating historical question. Hahnemann attended the
+    prestigious St. Afra school in Meissen, Germany,
+    where one of his teachers was{" "}
+    <strong>
+      Johann August Müller (1731–1804).
+    </strong>
+  </p>
 
-            <p>
-              The relationship between
-              Samuel Hahnemann and
-              Johann August Müller
-              is documented.
-            </p>
+  <p>
+    Historical accounts of
+    Hahnemann's education
+    independently establish
+    the relationship between
+    the young student and
+    his teacher. Could the “Augustine Muller”
+    mentioned in the institutional
+    history refer to
+    Johann August Müller? The similarity is intriguing.
+    However, an important distinction
+    must be made.
+  </p>
 
-            <p>
-              The genealogical relationship
-              between that teacher and
-              Father Augustus Müller
-              has not yet been established.
-            </p>
+  <!-- HISTORICAL RESEARCH NOTE -->
 
-          </div>
+  <div class="research-note">
 
+    <span class="research-label">
+      Historical Research Note
+    </span>
 
-          <p>
-            Research into Father Müller's
-            baptismal record has identified
-            his parents, but the intervening
-            generations necessary to
-            demonstrate a family connection
-            remain undocumented.
-          </p>
+    <p>
+      The relationship between
+      Samuel Hahnemann and
+      Johann August Müller
+      is documented.
+    </p>
 
-          <p>
-            The institutional account
-            therefore preserves an
-            interesting family tradition
-            rather than a proven
-            genealogical relationship.
-          </p>
+    <p>
+      The genealogical relationship
+      between that teacher and
+      Father Augustus Müller
+      has not yet been established.
+    </p>
 
-          <p>
-            It is a question worthy
-            of further historical
-            investigation.
-          </p>
+  </div>
 
-        </div>
+  <p>
+    Research into Father Müller's
+    baptismal record has identified
+    his parents, but the intervening
+    generations necessary to
+    demonstrate a family connection
+    remain undocumented. The institutional account
+    therefore preserves an
+    interesting family tradition
+    rather than a proven
+    genealogical relationship. It is a question worthy
+    of further historical
+    investigation.
+  </p>
 
-      </div>
+</div>
 
-    </section>
+</section>
+
 
 
         <!-- =====================================================
@@ -1483,29 +1490,17 @@ const showNIHPlaceholders = true;
           is not the size of the
           institutions that followed,
           but the simplicity of
-          their beginnings.
-        </p>
-
-        <p>
-          A young Jesuit, whose
+          their beginnings. A young Jesuit Priest, whose
           own experience of illness
           had led him to study
           homeopathy, traveled
           halfway around the world
-          to serve as a missionary.
-        </p>
-
-        <p>
-          He brought with him
+          to serve as a missionary. He brought with him
           a small chest of medicines,
           a commitment to his
           religious vocation,
           and a desire to help
-          those who were suffering.
-        </p>
-
-        <p>
-          Beneath a banyan tree
+          those who were suffering. Beneath a banyan tree
           in Mangalore, he began
           a work that would continue
           long after his death.
@@ -1519,19 +1514,11 @@ const showNIHPlaceholders = true;
           including people affected
           by leprosy, whom he
           welcomed without distinction
-          of religious belief.
-        </p>
-
-        <p>
-          Father Müller's story
+          of religious belief. Father Müller's story
           reminds us that the history
           of homeopathy is not only
           a history of medical ideas
-          and their practitioners.
-        </p>
-
-        <p>
-          It is also a history
+          and their practitioners. It is also a history
           of individuals whose
           personal convictions
           shaped how they chose
@@ -1734,10 +1721,8 @@ const showNIHPlaceholders = true;
             </h3>
 
             <p>
-              Institutional account
-              describing Father Müller's
-              religious motivation
-              and charitable mission.
+              A 2017 institutional publication recounting Father Müller's early homeopathic work, 
+              his religious calling, and his commitment to caring for the sick and marginalized.
             </p>
 
             <span class="source-link">
@@ -1819,6 +1804,7 @@ const showNIHPlaceholders = true;
 
   </main>
 </Layout>
+
 
 
 <style>
@@ -2115,20 +2101,27 @@ const showNIHPlaceholders = true;
   color: #4d614b;
 }
 
+
+
 .faith-section blockquote {
-  margin: 48px 0;
-  padding: 38px 40px;
+  width: 100%;
+  max-width: 760px;
+  margin: 28px auto;
+  padding: 18px 32px;
+  box-sizing: border-box;
   background: #ffffff;
   border-left: 4px solid var(--sage);
 }
 
 .faith-section blockquote p {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 33px;
-  line-height: 1.35;
+  font-size: 30px;
+  line-height: 1.2;
   font-style: italic;
   color: var(--navy);
+  margin-bottom: 12px;
 }
+
 
 .faith-section cite {
   font-family: Arial, sans-serif;
@@ -2662,20 +2655,22 @@ const showNIHPlaceholders = true;
 }
 
 
+
 /* TWO-COLUMN STRUCTURE */
 
 .history-page .hero-inner {
-  width: min(1280px, 100%);
+  width: min(1320px, 100%);
   margin: 0 auto;
 
   display: grid;
   grid-template-columns:
-    minmax(0, 1.25fr)
-    minmax(280px, 0.85fr);
+    minmax(0, 1.1fr)
+    minmax(0, 1fr);
 
-  gap: 80px;
+  gap: 35px;
   align-items: center;
 }
+
 
 
 /* LEFT COLUMN */
@@ -2738,11 +2733,43 @@ const showNIHPlaceholders = true;
 
 /* RIGHT COLUMN */
 
+
+
 .history-page .hero-portrait {
   width: 100%;
-  max-width: 420px;
+  max-width: 490px;
+  min-width: 0;
   justify-self: center;
+  align-self: center;
+  margin-bottom: 0;
+  transform: translateY(80px);
 }
+
+
+.history-page .hero-illustration {
+  width: 100%;
+  margin: 0;
+}
+
+.history-page .hero-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 370px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.history-page .hero-illustration .portrait-caption {
+  margin: 12px auto 0;
+  max-width: 470px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #d9e0e8;
+  text-align: center;
+}
+
 
 .history-page .portrait-placeholder {
   min-height: 500px;
@@ -2894,66 +2921,228 @@ const showNIHPlaceholders = true;
 }
 
 
+/* =====================================================
+   FAITH SECTION — DISPENSARY ILLUSTRATION
+   ===================================================== */
+
+.history-page .faith-dispensary {
+  width: min(100%, 760px);
+  margin: 42px auto 34px;
+  text-align: center;
+}
+
+.history-page .faith-dispensary img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  border: 1px solid rgba(65, 76, 57, 0.16);
+  box-shadow: 0 12px 30px rgba(36, 47, 31, 0.12);
+}
+
+.history-page .faith-dispensary figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-width: 680px;
+  margin: 14px auto 0;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #58655b;
+}
+
+.history-page .faith-dispensary figcaption strong {
+  color: #173a6a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .history-page .faith-dispensary {
+    margin: 30px auto 25px;
+  }
+
+  .history-page .faith-dispensary figcaption {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
+
 /* =========================================================
-   TABLET
+   LEPROSY HOSPITAL — FULL-WIDTH CONTINUATION
    ========================================================= */
 
-@media (max-width: 1000px) {
+.history-page .leprosy-continuation {
+  width: min(1100px, calc(100% - 48px));
+  margin: 20px auto 0;
+}
+
+/* Full-width historical quotation */
+
+.history-page .leprosy-continuation .leprosy-quote {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  margin: 0 0 38px;
+  padding: 30px 42px;
+}
+
+/* Quotation text */
+
+.history-page .leprosy-quote blockquote {
+  max-width: none;
+  margin-bottom: 14px;
+}
+
+/* Regular article paragraphs */
+
+.history-page .leprosy-continuation > p {
+  font-size: 19px;
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+  .history-page .leprosy-continuation {
+    width: calc(100% - 44px);
+    margin-top: 25px;
+  }
+
+  .history-page .leprosy-continuation .leprosy-quote {
+    padding: 26px 24px;
+    margin-bottom: 30px;
+  }
+
+  .history-page .leprosy-continuation > p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+}
+
+
+/* LEPROSY QUOTATION — CLOSING MARK */
+
+.history-page .leprosy-quote .closing-quote {
+  font-family: Georgia, serif;
+  font-size: 1em;
+  font-style: italic;
+  color: var(--navy);
+  margin-left: 2px;
+}
+
+/* LEPROSY QUOTATION — MATCHING QUOTATION MARKS */
+
+.history-page .leprosy-quote .opening-quote,
+.history-page .leprosy-quote .closing-quote {
+  font-family: Georgia, serif;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+  color: var(--navy);
+  line-height: inherit;
+  vertical-align: baseline;
+  margin: 0;
+}
+
+
+
+/* =====================================================
+   MÜLLER RESEARCH — FULL-WIDTH CONTINUATION
+   ===================================================== */
+
+.history-page .muller-research-continuation {
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin: 45px auto 0;
+  box-sizing: border-box;
+}
+
+.history-page .muller-research-continuation > p {
+  font-size: 19px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* Historical research note */
+
+.history-page .muller-research-continuation .research-note {
+  width: 100%;
+  max-width: none;
+  margin: 36px 0;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LEGACY SECTION — WIDER READING LAYOUT
+   ===================================================== */
+
+.history-page .legacy-section .legacy-inner {
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   LEGACY — WIDER CLOSING REFLECTION
+   ===================================================== */
+
+.history-page .legacy-section .legacy-closing {
+  width: 100%;
+  max-width: 950px;
+  margin: 42px auto;
+  padding: 28px 24px;
+  box-sizing: border-box;
+}
+
+.history-page .legacy-section .legacy-closing p {
+  max-width: none;
+  margin: 0;
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET — HERO
+   701px TO 1000px
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1000px) {
 
   .history-page .hero-inner {
-    gap: 40px;
     grid-template-columns:
       minmax(0, 1.2fr)
       minmax(240px, 0.8fr);
+    gap: 40px;
   }
 
   .history-page .hero-content h1 {
     font-size: clamp(46px, 6vw, 70px);
   }
 
-  .history-page .portrait-placeholder {
-    min-height: 400px;
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  .history-page .hero {
-    padding: 60px 22px;
-    background-position: 60% center;
-  }
-
-  .history-page .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .history-page .hero-content h1 {
-    font-size: clamp(43px, 10vw, 65px);
-  }
-
-  .history-page .hero-description {
-    font-size: 17px;
-  }
-
   .history-page .hero-portrait {
-    max-width: 350px;
+    max-width: 100%;
+    transform: translateY(35px);
   }
 
-  .history-page .portrait-placeholder {
-    min-height: 380px;
+  .history-page .hero-illustration img {
+    max-height: none;
+    height: auto;
   }
 
 }
 
+
 /* =========================================================
-   TABLET
+   TABLET — SIDE DOCUMENT LAYOUTS
+   769px TO 1100px
    ========================================================= */
 
 @media (min-width: 769px) and (max-width: 1100px) {
@@ -2981,11 +3170,133 @@ const showNIHPlaceholders = true;
 
 }
 
+
 /* =========================================================
-   MOBILE
+   MOBILE — GENERAL PAGE
+   UP TO 768px
    ========================================================= */
 
 @media (max-width: 768px) {
+
+  /* SECTION SPACING */
+
+  .history-page .article-section,
+  .history-page .faith-section,
+  .history-page .legacy-section,
+  .history-page .sources-section {
+    padding: 65px 22px;
+  }
+
+  /* HEADINGS */
+
+  .history-page .article-section h2,
+  .history-page .faith-section h2,
+  .history-page .legacy-section h2,
+  .history-page .sources-section h2 {
+    font-size: 39px;
+  }
+
+  /* BODY TEXT */
+
+  .history-page .article-section p,
+  .history-page .faith-section p,
+  .history-page .legacy-section p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .history-page .article-section .lead {
+    font-size: 20px;
+  }
+
+  /* HISTORICAL DOCUMENTS */
+
+  .history-page .document-figure {
+    margin: 35px -8px;
+    padding: 10px;
+  }
+
+  .history-page .document-figure img {
+    max-height: 520px;
+  }
+
+  /* STORY HIGHLIGHTS */
+
+  .history-page .story-highlight {
+    padding: 30px 10px;
+  }
+
+  .history-page .story-highlight p {
+    font-size: 27px;
+  }
+
+  /* FAITH SECTION QUOTATION */
+
+  .history-page .faith-section blockquote {
+    max-width: 100%;
+    padding: 26px 24px;
+    margin: 32px auto;
+  }
+
+  .history-page .faith-section blockquote p {
+    font-size: 27px;
+  }
+
+  /* PRIMARY HISTORICAL QUOTATIONS */
+
+  .history-page .primary-quote {
+    padding: 35px 25px;
+  }
+
+  .history-page .primary-quote blockquote {
+    font-size: 25px;
+  }
+
+  /* RESEARCH NOTES */
+
+  .history-page .research-note {
+    padding: 25px;
+  }
+
+  /* LEGACY SECTION */
+
+  .history-page .legacy-closing {
+    padding: 30px 15px;
+  }
+
+  .history-page .legacy-closing p {
+    font-size: 27px;
+  }
+
+  /* SOURCES */
+
+  .history-page .source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-page .source-card {
+    padding: 25px;
+  }
+
+  /* ARTICLE FOOTER */
+
+  .history-page .article-footer {
+    padding: 70px 22px;
+  }
+
+  .history-page .article-footer h2 {
+    font-size: 39px;
+  }
+
+  /* BANYAN BOTANICAL BACKGROUND */
+
+  .history-page .banyan-section::before {
+    width: 90%;
+    opacity: 0.12;
+    background-size: 100% 100%;
+  }
+
+  /* SIDE DOCUMENT SECTIONS */
 
   .history-page .side-document-section {
     padding: 65px 0;
@@ -2996,7 +3307,6 @@ const showNIHPlaceholders = true;
   .history-page .side-layout.two-column-right {
     display: flex;
     flex-direction: column;
-
     width: calc(100% - 44px);
     gap: 30px;
   }
@@ -3016,149 +3326,119 @@ const showNIHPlaceholders = true;
     max-height: 540px;
   }
 
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  .hero {
-    padding: 75px 22px 85px;
+  .history-page .muller-research-continuation {
+    width: calc(100% - 44px);
+    margin-top: 30px;
   }
 
-  .hero h1 {
-    font-size: 49px;
-  }
-
-  .hero-subtitle {
-    font-size: 22px;
-  }
-
-  .hero-quote p {
-    font-size: 18px;
-  }
-
-  .eyebrow {
-    font-size: 9px;
-    letter-spacing: 1.7px;
-  }
-
-  .article-section,
-  .faith-section,
-  .legacy-section,
-  .sources-section {
-    padding: 65px 22px;
-  }
-
-  .article-section h2,
-  .faith-section h2,
-  .legacy-section h2,
-  .sources-section h2 {
-    font-size: 39px;
-  }
-
-  .article-section p,
-  .faith-section p,
-  .legacy-section p {
+  .history-page .muller-research-continuation > p {
     font-size: 17px;
     line-height: 1.8;
   }
 
-  .article-section .lead {
-    font-size: 20px;
+
+/* LEGACY SECTION — MOBILE */
+
+.history-page .legacy-section .legacy-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+.history-page .legacy-section .legacy-closing {
+  max-width: 100%;
+  padding: 24px 12px;
+}
+
+
+}
+
+
+/* =========================================================
+   MOBILE — HERO
+   UP TO 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .history-page .hero {
+    padding: 60px 22px 75px;
+    background-position: 60% center;
   }
 
-  .document-figure {
-    margin: 35px -8px;
-    padding: 10px;
-  }
-
-  .document-figure img {
-    max-height: 520px;
-  }
-
-  .story-highlight {
-    padding: 30px 10px;
-  }
-
-  .story-highlight p {
-    font-size: 27px;
-  }
-
-  .faith-section blockquote {
-    padding: 28px 22px;
-  }
-
-  .faith-section blockquote p {
-    font-size: 27px;
-  }
-
-  .primary-quote {
-    padding: 35px 25px;
-  }
-
-  .primary-quote blockquote {
-    font-size: 25px;
-  }
-
-  .research-note {
-    padding: 25px;
-  }
-
-  .pending-photo {
-    min-height: 250px;
-    padding: 30px 20px;
-  }
-
-  .pending-photo h3 {
-    font-size: 27px;
-  }
-
-  .legacy-closing {
-    padding: 30px 15px;
-  }
-
-  .legacy-closing p {
-    font-size: 27px;
-  }
-
-  .source-grid {
+  .history-page .hero-inner {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .source-card {
-    padding: 25px;
+  .history-page .hero-content h1 {
+    font-size: clamp(43px, 10vw, 65px);
   }
 
-  .article-footer {
-    padding: 70px 22px;
+  .history-page .hero-subtitle {
+    font-size: 22px;
   }
 
-  .article-footer h2 {
-    font-size: 39px;
+  .history-page .hero-description {
+    font-size: 17px;
   }
 
-  .banyan-section::before {
-    width: 90%;
-    opacity: 0.12;
-    background-size: 100% 100%;
+  .history-page .hero-portrait {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .history-page .hero-illustration {
+    width: 100%;
+  }
+
+  .history-page .hero-illustration img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .history-page .hero-illustration .portrait-caption {
+    max-width: 100%;
+    margin-top: 12px;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .history-page .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.7px;
   }
 
 }
 
+
+/* =========================================================
+   SMALL MOBILE SCREENS
+   UP TO 380px
+   ========================================================= */
+
 @media (max-width: 380px) {
 
-  .hero h1 {
+  .history-page .hero-content h1 {
     font-size: 42px;
   }
 
-  .article-section h2,
-  .faith-section h2,
-  .legacy-section h2 {
+  .history-page .article-section h2,
+  .history-page .faith-section h2,
+  .history-page .legacy-section h2 {
     font-size: 35px;
+  }
+
+  .history-page .faith-section blockquote {
+    padding: 22px 18px;
+  }
+
+  .history-page .faith-section blockquote p {
+    font-size: 23px;
   }
 
 }
