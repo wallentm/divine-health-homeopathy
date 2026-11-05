@@ -66,85 +66,70 @@ import BotanicalCard from "../components/BotanicalCard.astro";
 
 <style>
 
-.difference{
+/* =========================================
+   MAIN SECTION
+   ========================================= */
 
-    padding:110px 40px;
+.difference {
+  padding: 110px 40px;
 
-    background:
-        radial-gradient(circle at top,#fcfaf5,#f5efe5);
+  background:
+    radial-gradient(circle at top, #fcfaf5, #f5efe5);
 
-    scroll-margin-top: 115px;
-
+  scroll-margin-top: 115px;
 }
 
-.container{
-
-    max-width:1200px;
-
-    margin:auto;
-
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.eyebrow{
+/* =========================================
+   SECTION HEADING
+   ========================================= */
 
-    text-align:center;
-
-    color:var(--gold);
-
-    text-transform:uppercase;
-
-    letter-spacing:5px;
-
-    font-size:.9rem;
-
-    margin-bottom:16px;
-
+.eyebrow {
+  text-align: center;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
 }
 
-h2{
-
-    text-align:center;
-
-    font-size:3rem;
-
-    color:var(--navy);
-
-    margin-bottom:26px;
-
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--navy);
+  margin-bottom: 26px;
 }
 
-.intro{
-
-    max-width:900px;
-
-    margin:35px auto 70px;
-
-    text-align:center;
-
-    font-size:1.2rem;
-
-    line-height:1.9;
-
-    color:#596676;
-
+.intro {
+  max-width: 900px;
+  margin: 35px auto 70px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #596676;
 }
 
-.cards{
+/* =========================================
+   BOTANICAL CARDS
+   ========================================= */
 
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:32px;
-
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-.cta{
+/* =========================================
+   FAQ BUTTON
+   ========================================= */
 
-    text-align:center;
-
-    margin-top:55px;
-
+.cta {
+  text-align: center;
+  margin-top: 55px;
 }
 
 .learn-button {
@@ -185,19 +170,51 @@ h2{
   transform: translateX(4px);
 }
 
-@media(max-width:1000px){
+/* =========================================
+   TABLET — 1000px AND BELOW
+   ========================================= */
 
-.cards{
+@media (max-width: 1000px) {
 
-grid-template-columns:1fr;
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
 
 }
 
-h2{
+/* =========================================
+   MOBILE — 680px AND BELOW
+   ========================================= */
 
-font-size:2.4rem;
+@media (max-width: 680px) {
 
-}
+  .difference {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cta {
+    width: 100%;
+  }
+
+  .learn-button {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 15px 22px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+    gap: 10px;
+    overflow-wrap: break-word;
+  }
+
+  .button-arrow {
+    flex-shrink: 0;
+  }
 
 }
 
