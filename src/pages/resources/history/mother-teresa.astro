@@ -239,14 +239,18 @@ import HistorySeriesBanner from "../../../components/HistorySeriesBanner.astro";
           </p>
 
           <p class="source-link">
-            <a
-              href="https://mbhmch.org/about%20us.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Mahesh Bhattacharyya Homoeopathic Medical College &amp; Hospital
-              — Institutional History →
-            </a>
+            
+<a
+  href="https://principalmbhmch.wixsite.com/mbhmch"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="historical-source-link"
+>
+  College History
+  <span class="source-link-ending">— Institutional Account →</span>
+</a>
+
+            
           </p>
         </section>
 
@@ -459,7 +463,7 @@ import HistorySeriesBanner from "../../../components/HistorySeriesBanner.astro";
 
             <li>
               <a
-                href="https://mbhmch.org/about%20us.html"
+                href="https://principalmbhmch.wixsite.com/mbhmch"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -805,5 +809,24 @@ import HistorySeriesBanner from "../../../components/HistorySeriesBanner.astro";
   .sources-section {
     padding: 1.5rem;
   }
+
+  
+.historical-source-link {
+  color: #173A6A;
+  font-weight: 700;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.historical-source-link .source-link-ending {
+  white-space: nowrap;
+}
+
+.historical-source-link:hover {
+  color: #B8933B;
+  text-decoration: underline;
+}
+
+
 }
 </style>
