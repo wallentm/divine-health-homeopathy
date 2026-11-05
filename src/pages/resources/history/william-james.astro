@@ -10,9 +10,9 @@ const pageDescription =
 
 const sources = {
   croceMedicine:
-    "https://dokumen.pub/the-oxford-handbook-of-william-james-0199395691-9780199395699.html",
+    "https://academic.oup.com/edited-volume/34712/chapter-abstract/296433115",
   croceYoung:
-    "https://dokumen.pub/young-william-james-thinking-1421423650-9781421423654.html",
+    "https://www.press.jhu.edu/books/title/11845/young-william-james-thinking",
   congressionalRecord:
     "https://www.govinfo.gov/content/pkg/GPO-CRECB-1912-pt6-v48/pdf/GPO-CRECB-1912-pt6-v48-5.pdf",
   letters:
@@ -232,7 +232,7 @@ const sources = {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Explore Croce’s chapter and archival references →
+              Read Croce’s chapter abstract at Oxford Academic →
             </a>
           </div>
         </aside>
@@ -308,7 +308,7 @@ const sources = {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read Croce’s discussion of Wilkinson’s treatment →
+            View <em>Young William James Thinking</em> book details at Johns Hopkins Press →
           </a>
 
           <a
@@ -317,7 +317,7 @@ const sources = {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Explore the Oxford Handbook references →
+            Read Croce’s chapter abstract at Oxford Academic →
           </a>
         </div>
       </aside>
@@ -401,7 +401,7 @@ const sources = {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Read the Hydrastis passage and its scholarly citation →
+              View <em>Young William James Thinking</em> book details at Johns Hopkins Press →
             </a>
           </div>
         </aside>
@@ -411,7 +411,7 @@ const sources = {
     <!-- MEDICAL REGISTRATION ADDRESS, 1898 -->
 
     <section class="article-section reading-column" id="medical-registration-1898">
-      <p class="section-label">February 1898</p>
+      <p class="section-label">1898</p>
 
       <h2>Homeopathy Enters James’s Public Argument</h2>
 
@@ -464,40 +464,50 @@ const sources = {
         </strong>
       </p>
 
-      <aside class="section-source" aria-labelledby="address-source-title">
+            <aside class="section-source" aria-labelledby="address-source-title">
         <h3 class="source-label" id="address-source-title">
           Source &amp; Evidence
         </h3>
 
         <p>
-          <strong>Published primary source. </strong>
+          <strong>Published primary source.</strong>{" "}
           William James, “Address on the Medical Registration Bill”
-          (1898), reprinted in
-          <em> Essays, Comments, and Reviews</em>,
+          (1898), reprinted in <em>Essays, Comments, and Reviews</em>,
           Harvard University Press, 1987, pp. 56–62.
         </p>
 
         <p>
-          A later historical reproduction in the
-          <em> Congressional Record </em>
-          includes James’s discussion of the reported experience of
-          homeopathic physicians and patients.
+          The 1912 <em>Congressional Record</em> quotes James’s address
+          and identifies it as delivered before the Massachusetts
+          legislature’s Committee on Public Health in Boston on March 2,
+          1898. The excerpt includes his discussion of the experiences
+          reported by homeopathic physicians and their patients.
         </p>
 
         <p class="source-note">
-          The government-hosted PDF provides a historical reproduction of
-          James’s argument. Its inclusion in the Congressional Record
-          is not a government endorsement of the medical claims discussed.
+          The Harvard University Press link provides details about the
+          scholarly edition. To read James’s words, open the Congressional
+          Record PDF. The excerpt begins on PDF page 16, in the right-hand
+          column, just below his name.
         </p>
 
         <div class="source-links">
           <a
             class="source-link"
-            href={sources.congressionalRecord}
+            href="https://www.hup.harvard.edu/books/9780674265523"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View the historical reproduction in the Congressional Record (PDF) →
+            View book details for <em>Essays, Comments, and Reviews</em> at Harvard University Press →
+          </a>
+
+          <a
+            class="source-link"
+            href="https://www.govinfo.gov/content/pkg/GPO-CRECB-1912-pt6-v48/pdf/GPO-CRECB-1912-pt6-v48-5.pdf#page=16"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read James’s address as quoted in the 1912 Congressional Record (PDF, p. 16) →
           </a>
         </div>
       </aside>
@@ -652,12 +662,9 @@ const sources = {
           <p>
             James was not merely defending someone else’s right to experiment.
             He now made a direct statement about the remedies themselves.
-          </p>
-
-          <p>
-            The letter does not establish that he endorsed every doctrine
+            This letter does not establish that he endorsed every doctrine
             associated with homeopathy. It does show that he rejected the
-            assertion that the remedies must necessarily be inert.
+            assertion that homeopathic remedies did not work.
           </p>
 
           <aside class="evidence-note" aria-labelledby="handwriting-title">
@@ -818,7 +825,7 @@ const sources = {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Read Shusterman’s scholarly discussion →
+              Read Shusterman’s discussion of James’s treatment by Taylor →
             </a>
 
             <a
@@ -827,7 +834,7 @@ const sources = {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Explore Croce’s discussion of James and medicine →
+              Read Croce’s chapter abstract at Oxford Academic →
             </a>
 
             <a
@@ -836,7 +843,7 @@ const sources = {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View the published correspondence edition →
+              View book details for Volume 3 at the University of Virginia Press →
             </a>
           </div>
         </aside>
@@ -916,9 +923,6 @@ const sources = {
         </div>
       </div>
 
-      <p class="timeline-note">
-        Each date links back to the corresponding discussion and source note.
-      </p>
     </section>
 
     <!-- CAREFUL READING -->
@@ -1751,6 +1755,30 @@ const sources = {
     font-size: 0.75rem;
     font-weight: 700;
   }
+
+
+  /* Hydrastis quote and the first Rankin quote */
+#hydrastis-1872 .pull-quote,
+#rankin-1903 .pull-quote {
+  box-sizing: border-box;
+  width: min(100%, 640px);
+  margin-inline: auto;
+}
+
+/* The longer cream Rankin quote needs a little more room */
+#rankin-1903 .pull-quote.second {
+  width: min(100%, 740px);
+}
+
+/* Keep the line lengths balanced */
+#hydrastis-1872 .pull-quote p,
+#rankin-1903 .pull-quote p {
+  text-wrap: balance;
+}
+
+#rankin-1903 .pull-quote:not(.second) p {
+  text-align: center;
+}
 
   /* TABLET */
 
